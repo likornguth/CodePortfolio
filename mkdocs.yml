@@ -1,0 +1,11 @@
+site_name: My Docs
+nav:
+  - Home: index.md
+  - Node Graph Visualizer: project3.md
+  - WebGL Stereoscope Effect: project2.md
+  - Interactive Mickey Lite-Brite Display: project1.md
+  - OpenGL Mesh Viewer: project4.md
+  - VR Music Video: project6.md
+  
+
+theme: readthedocs
