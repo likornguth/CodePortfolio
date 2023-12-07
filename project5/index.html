@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Ray Tracing Engine - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Ray Tracing Engine";
+        var mkdocs_page_input_path = "project5.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project2/">WebGL Stereoscope Effect</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Mickey Lite-Brite Display</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Ray Tracing Engine</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="ray-tracing-engine">Ray Tracing Engine</h1>
+<h2 id="part-1-antialiasing">Part 1: Antialiasing</h2>
+<h3 id="implementation-updates">Implementation Updates:</h3>
+<ul>
+<li>Modified main.cc in src/rtbasic to incorporate the -a command-line argument for defining the number of samples per pixel.</li>
+<li>Introduced <code>RayTracer::SetNumSamplesPerPixel()</code>and necessary data members to control the samples per pixel for antialiasing.</li>
+<li>Altered <code>RayTracer::Render()</code>to generate multiple random rays through each pixel for antialiasing, enhancing image quality.</li>
+</ul>
+<hr />
+<h2 id="part-2-trimesh">Part 2: TriMesh</h2>
+<h3 id="trimesh-functionality">TriMesh Functionality:</h3>
+<p>Implemented TriMesh functionalities (<code>Hit</code>, <code>RayFaceHit</code>, <code>Save</code>, <code>Load</code>, <code>GetBoundingBox</code>, <code>ComputeFaceNormals</code>, <code>ComputeVertexNormals</code>) in <code>trimesh.cc</code>.
+Enhanced scene parser (<code>raytra_parser.cc</code>) to load triangle meshes using the <code>w</code> command.
+Generated and verified rendering for <code>sphere_mesh.scn</code> and <code>suzanne.scn</code>.</p>
+<h3 id="mesh-generation">Mesh Generation:</h3>
+<ul>
+<li>Implemented <code>BuildWatertightSphere()</code> and <code>BuildSphereWithTexCoords()</code> in <code>main.cc</code> of <code>mesh_gen</code>.</li>
+<li><code>BuildSphereWithTexCoords()</code> generates a non-watertight sphere mesh with vertex texture coordinates mapped from spherical coordinates.</li>
+<li><code>BuildWatertightSphere()</code> creates a watertight sphere mesh without boundary vertices, edges, or faces.</li>
+</ul>
+<hr />
+<h2 id="part-3-texture-mapping">Part 3: Texture Mapping</h2>
+<h3 id="facegeouv-class"><code>FaceGeoUV</code> Class:</h3>
+<ul>
+<li>Implemented <code>FaceGeoUV</code> in <code>face_geouv.h</code> and <code>face_geouv.cc</code>, along with necessary modifications in <code>HitRecord</code> and <code>Surface::Hit()</code> functions for different surface types.</li>
+</ul>
+<h3 id="texture-handling">Texture Handling:</h3>
+<ul>
+<li>Implemented <code>ImageTexture::Value()</code> in <code>image_texture.cc</code> to evaluate textures at specific locations.</li>
+<li>Modified <code>PhongMaterial</code> to support diffuse textures, allowing evaluation of textures at hit points.</li>
+</ul>
+<h3 id="scene-file-parser-update">Scene File Parser Update:</h3>
+<ul>
+<li>Updated the scene file parser to support textured Phong materials using image textures.</li>
+</ul>
+<hr />
+<h2 id="part-4-bounding-volume-hierarchy-bvh">Part 4: Bounding Volume Hierarchy (BVH)</h2>
+<h3 id="bvhnode-implementation">BVHNode Implementation:</h3>
+<ul>
+<li>Completed <code>BVHNode::BuildBVH()</code> and <code>BVHNode::Hit()</code> functionalities in <code>bvh_node.cc</code>.
+Introduced a scene-level BVH in <code>main.cc</code> of <code>rtbasic</code> for efficient rendering.</li>
+</ul>
+<h3 id="mesh-level-bvh-bonus">Mesh-level BVH (Bonus):</h3>
+<ul>
+<li>Implemented <code>TriMesh::BuildBVH()</code> to construct a BVH of mesh triangle faces for optimized intersection tests.</li>
+<li>Created a new <code>BVHTriMeshFace</code> class to represent individual TriMesh faces for BVH construction.</li>
+</ul>
+<h3 id="final-renders">Final Renders:</h3>
+<p>Rendered scenes such as <code>jug_triangle_soup.scn</code>, <code>sphere_mesh_textured.scn</code>, <code>jug.scn</code>, and <code>dandelion.scn</code> to demonstrate improved rendering with added functionalities.
+The assignment includes significant enhancements to ray tracing capabilities, mesh handling, texture mapping, and BVH implementation. The additions allow for improved image quality, efficient mesh representation, and texture-driven material definitions in scene rendering.</p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

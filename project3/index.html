@@ -1,0 +1,354 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Node Graph Visualizer - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Node Graph Visualizer";
+        var mkdocs_page_input_path = "project3.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Node Graph Visualizer</a>
+    <ul class="current">
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project2/">WebGL Stereoscope Effect</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Mickey Lite-Brite Display</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Node Graph Visualizer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="node-graph-visualizer">Node Graph Visualizer</h1>
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-04%20at%209.35.22%20PM.png" /></p>
+<h1 id="node-graph-visualizer_1">Node Graph Visualizer</h1>
+<h2 id="1-introduction">1. Introduction</h2>
+<ul>
+<li>The Node Graph Visualizer is a graphical user interface that visually displays relationships between nodes in a <a href="https://en.wikipedia.org/wiki/Dependency_graph">Dependency Graph software architecture</a> </li>
+<li>
+<p>The <b>Dependency Graph</b> (aka "Node Graph") structure is the industry standard for developing  graphics applications</p>
+</li>
+<li>
+<p>The corresponding <b>Visualizer </b> is simply a user-friendly and code-free interface that can be used to manipulate nodes in real-time rendering applications .</p>
+</li>
+<li>
+<p><u>Maya</u>, <u>ZBrush</u>, <u>Houdini</u>, <u>Blender</u>, <u>Unity</u>, <u>Cinema 4D</u>, and most other 3D Content Creation tools use a Dependency Graph for their codebase due its efficiency, flexibility, and compatibility with graphics applications.</p>
+<ul>
+<li>These softwares also include a code-free interface for technical users to create custom nodes and plug-ins.  For example, Autodesk Maya's <i>Hypershade</i> was the blueprint for this visualizer project.</li>
+</ul>
+</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th><i>Hypershade</i></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Alt text" src="../src/hypershade.png" /></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="2-goals-and-objectives">2. Goals and Objectives</h2>
+<ul>
+<li>The UI design goals were:<ul>
+<li>Create an intuitive and aesthetic interface for developers </li>
+<li>Streamline workflows and improve productivity</li>
+<li>Enable easy integration with existing C++ codebase</li>
+</ul>
+</li>
+<li>Implementation Objectives:<ul>
+<li>Smart Default Layout </li>
+<li>Draggable Nodes</li>
+<li>Pin Objects</li>
+<li>Instantiate new nodes</li>
+<li>Draw Connections</li>
+<li>Delete Nodes/Connections</li>
+<li>Edit Plug Attributes</li>
+<li>View Plug Attributes</li>
+</ul>
+</li>
+</ul>
+<hr />
+<h2 id="key-features">Key Features</h2>
+<h3 id="viewing-modes">Viewing Modes</h3>
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-04%20at%209.36.32%20PM.png" /></p>
+<ol>
+<li>
+<p><b>Simple</b></p>
+<ul>
+<li>Displays only one input plug and output plug</li>
+<li>Remaining plugs are hidden</li>
+</ul>
+</li>
+<li>
+<p><b>Connected</b></p>
+<ul>
+<li>Displays only the input/output plugs that are actively connected</li>
+</ul>
+</li>
+<li>
+<p><b>Full</b></p>
+<ul>
+<li>Displays all input/output plugs regardless of connection status</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h3 id="attribute-editor">Attribute Editor</h3>
+<p>All Node-Based 3D Software architectures with a visual interface feature some kind of editor to customize node parameters.  You may recognize this menu in Unity's UI:</p>
+<table>
+<thead>
+<tr>
+<th>Unity Attribute Editor</th>
+<th>My Attribute Editor</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Alt text" src="../src/unity_attribute_editor.jpeg" /></td>
+<td><img alt="Alt text" src="../src/Screenshot%202023-12-04%20at%209.36.49%20PM.png" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Users are able to select a specific plug in a node and access its data objects, parameters, and variable name</li>
+<li>Users can also click the <u>Affects &gt;</u> button on the top right to view which downstream nodes are dependent on the selected plug</li>
+</ul>
+<h3 id="smart-default-layout-algorithm">Smart Default Layout Algorithm</h3>
+<ul>
+<li>The previous examples have been relatively simple in scale and complexity</li>
+<li>A good visualizer should be scalable to handle the rendering demands of large node networks</li>
+</ul>
+<p><img alt="Alt text" src="../src/sugiyama.png" /></p>
+<h3 id="question-how-to-draw-the-prettiest-graph">Question: How to draw the prettiest graph?</h3>
+<p>First, let's define the constraints of an aesthetic graph</p>
+<ol>
+<li>
+<p><b> Layer Assignment</b>: There should be a clear hierarchy of nodes, where each node is assigned to a layer and each node is dependent only on nodes that reside in a preceding layer.</p>
+<ul>
+<li>This layout improves readability by introducing a uni-directional flow of information (left to right or top down)</li>
+<li>In Dependency Graph programming, it is crucial to see which nodes are further 'downstream' for debugging purposes</li>
+</ul>
+</li>
+<li>
+<p><b>Crossing Reduction</b>: Ideally, there should be no crossing of the connections between nodes.  If crossing elimination is impossible, then the nodes should be drawn in a way that minimizes crossings</p>
+</li>
+</ol>
+<h3 id="best-approach">Best Approach</h3>
+<p>The optimal solution to the Layered Graph Drawing problem is known as the <b>Sugiyama Technique</b>.  I used the set of algorithms described in this paper: <a href="https://jgaa.info/accepted/2005/EiglspergerSiebenhallerKaufmann2005.9.3.pdf">An Efficient Implementation of Sugiyama’s
+Algorithm for Layered Graph Drawing (Eiglsperger et al. , 2005)</a></p>
+<p>NOTE: This algorithm only works for Directed Acyclic Graphs (DAG) , so the first step in implementation is to identify eliminate all existing cycles.</p>
+<hr />
+<h2 id="video-demo">Video Demo</h2>
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HsE-eUiugmg?si=4fexdFALnTN6kXFV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+<hr />
+<h2 id="3-technical-specifications">3. Technical Specifications</h2>
+<h3 id="tools-and-technologies">Tools and Technologies:</h3>
+<ul>
+<li>Qt Design Studio: Version 4.0</li>
+<li>Qt Framework: Version 6.6</li>
+<li>Programming Language: C++, qml</li>
+</ul>
+<h3 id="platform-compatibility">Platform Compatibility:</h3>
+<ul>
+<li>Windows, macOS, Linux</li>
+<li>Ensure responsiveness across various screen sizes and resolutions</li>
+</ul>
+<h3 id="user-interface-design-guidelines">User Interface Design Guidelines:</h3>
+<ul>
+<li>Consistent UI/UX design adhering to best practices</li>
+<li>
+<p>Accessibility considerations for differently-abled developers</p>
+</li>
+<li>
+<p>Explanation of the research paper on graph layout algorithms</p>
+</li>
+<li>Integration of graph layout algorithms into the GUI</li>
+<li>Details on the implementation approach and its relevance to the project</li>
+<li>Expected impact on the GUI's usability and functionality</li>
+</ul>
+<h2 id="5-development-phases">5. Development Phases</h2>
+<h3 id="phase-1-planning-and-design">Phase 1: Planning and Design</h3>
+<ul>
+<li>Requirement gathering and analysis</li>
+<li>UI/UX wireframing and prototyping using Qt Design Studio</li>
+<li>Feedback collection and iterations</li>
+</ul>
+<h3 id="phase-2-implementation">Phase 2: Implementation</h3>
+<ul>
+<li>Front-end development using Qt Design Studio</li>
+<li>Integration of backend functionalities (if applicable)</li>
+<li>Implementation of graph layout algorithms</li>
+<li>Continuous testing and debugging</li>
+</ul>
+<h3 id="phase-3-quality-assurance-and-testing">Phase 3: Quality Assurance and Testing</h3>
+<ul>
+<li>Comprehensive testing across multiple platforms</li>
+<li>Usability testing with target users (developers)</li>
+<li>Bug fixing and performance optimization</li>
+</ul>
+<h3 id="phase-4-deployment-and-documentation">Phase 4: Deployment and Documentation</h3>
+<ul>
+<li>Packaging the GUI for different platforms</li>
+<li>Preparation of user documentation and guidelines</li>
+<li>Release and deployment strategies</li>
+</ul>
+<h2 id="6-risk-assessment-and-mitigation">6. Risk Assessment and Mitigation</h2>
+<ul>
+<li>Identification of potential risks:<ul>
+<li>Compatibility issues with different operating systems</li>
+<li>Complexity in integrating version control systems</li>
+<li>User acceptance challenges due to UI/UX design</li>
+</ul>
+</li>
+<li>Strategies for risk mitigation:<ul>
+<li>Regular testing and compatibility checks</li>
+<li>Collaboration with version control system providers</li>
+<li>Continuous user feedback and iterative design improvements</li>
+</ul>
+</li>
+</ul>
+<h2 id="7-timeline-and-milestones">7. Timeline and Milestones</h2>
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-06%20at%204.30.35%20PM.png" /></p>
+<h2 id="9-conclusion">9. Conclusion</h2>
+<ul>
+<li>The Design Goals for the project were to make an intuitive, readable, and aesthetic interface for Dependency Graph programming. I accomplished the following:<ul>
+<li>Functioning user interface with draggable, instantiable, and customizable nodes and connections</li>
+<li>C++ compatible </li>
+<li>Node Graph layout algorithm implemented</li>
+</ul>
+</li>
+<li>This project will increase developer productivity by providing an easy-to-use interface that streamlines 3D development workflows</li>
+<li>Future considerations and potential enhancements:<ul>
+<li>More plug and data types</li>
+<li>Complex objets</li>
+</ul>
+</li>
+</ul>
+<h2 id="10-references-and-appendices">10. References and Appendices</h2>
+<ul>
+<li><a href="https://jgaa.info/accepted/2005/EiglspergerSiebenhallerKaufmann2005.9.3.pdf">An Efficient Implementation of Sugiyama’s
+Algorithm for Layered Graph Drawing (Eiglsperger et al. , 2005)</a></li>
+<li><a href="https://en.wikipedia.org/wiki/Layered_graph_drawing">Layered Graph Drawing (Wikipedia)
+</a></li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project2/" class="btn btn-neutral float-right" title="WebGL Stereoscope Effect">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project2/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

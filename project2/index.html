@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>WebGL Stereoscope Effect - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "WebGL Stereoscope Effect";
+        var mkdocs_page_input_path = "project2.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">WebGL Stereoscope Effect</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#what-is-stereoscopic-rendering">What is Stereoscopic Rendering?</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#parallax-barrier">Parallax Barrier</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#anaglyph-rendering">Anaglyph Rendering</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#key-components">Key Components</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-scene-initialization-init-function">1. Scene Initialization (init() Function)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-effect-switching-switcheffectvalue-function">2. Effect Switching (switchEffect(value) Function)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-event-handling">3. Event Handling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4animation-loop">4.Animation Loop</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#breakdown-of-operations">Breakdown of Operations</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#overall-functionality">Overall Functionality</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Mickey Lite-Brite Display</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">WebGL Stereoscope Effect</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="webgl-stereoscope-effect">WebGL Stereoscope Effect</h1>
+<h2 id="overview">Overview</h2>
+<p>The application sets up a 3D scene containing multiple spheres and allows users to switch between different rendering effects: Stereo, Anaglyph, and Parallax. It offers real-time interaction by capturing mouse movements to control the camera's position and direction.</p>
+<p><a href="https://stereo-camera.vercel.app/" title="Link with example title."><img alt="Button Example" src="https://img.shields.io/badge/Check_it_out_&gt;-37a779?style=for-the-badge" /></a></p>
+<!----------------------------------------------------------------------------->
+<!---------------------------------[ Buttons ]--------------------------------->
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-05%20at%201.34.40%20PM.png" /></p>
+<hr />
+<h2 id="what-is-stereoscopic-rendering">What is Stereoscopic Rendering?</h2>
+<p>Stereoscopic rendering is based on the principle of presenting two slightly different images to each eye, mimicking the way human eyes perceive depth in the real world. It involves:</p>
+<ol>
+<li>
+<p><b>Dual Perspective Rendering: </b>
+Two separate views of the scene, representing the left-eye and right-eye perspectives, are generated. These views simulate the slight offset observed by each eye in a natural setting.</p>
+</li>
+<li>
+<p><b>Displaying Views: </b>
+The left-eye and right-eye images are typically displayed side by side or in quick succession. When viewed through stereoscopic glasses (often polarized or active-shutter glasses), each eye perceives its respective image, resulting in a perception of depth and three-dimensionality.</p>
+</li>
+<li>
+<p><b>Adjusting Camera Settings: </b>
+In 3D applications, the camera setup is crucial. The camera settings need to mimic human eye separation to create an accurate stereoscopic effect.</p>
+</li>
+</ol>
+<hr />
+<h2 id="parallax-barrier">Parallax Barrier</h2>
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-05%20at%201.35.54%20PM.png" /></p>
+<hr />
+<p>The parallax barrier effect is a glasses-free 3D technology used in displays, such as autostereoscopic screens (screens that provide 3D without requiring glasses). Key aspects include:</p>
+<ol>
+<li>
+<p><b>Barrier Layer: </b>
+A barrier layer consisting of a series of precise slits or barriers is placed in front of the display panel.</p>
+</li>
+<li>
+<p><b>Directional Light Control: </b>
+The barrier restricts the direction of light emitted by the display, ensuring different pixels or subpixels are visible from different viewing angles.</p>
+</li>
+<li>
+<p><b>Perspective Variation: </b>
+Each eye sees a slightly different set of pixels due to the barrier's directional control, creating a stereoscopic effect without requiring glasses.</p>
+</li>
+</ol>
+<hr />
+<h2 id="anaglyph-rendering">Anaglyph Rendering</h2>
+<p><img alt="Alt text" src="../src/Screenshot%202023-12-05%20at%201.35.06%20PM.png" /></p>
+<hr />
+<p>Anaglyph rendering uses color filtering to create the illusion of depth perception without specialized displays. It involves:</p>
+<ol>
+<li>
+<p><b>Dual-Color Images: </b>
+Two images of the scene are rendered, each overlaid with a different color filter (typically red-cyan or red-blue).</p>
+</li>
+<li>
+<p><b>Use of Glasses: </b>
+Anaglyph glasses (with corresponding color filters) are worn by the viewer. Each lens filters out one of the colored images, ensuring each eye sees only its respective view.</p>
+</li>
+<li>
+<p><b>Color Separation:</b>
+ When the filtered images are superimposed in the brain, the color differences create a perception of depth and three-dimensionality.</p>
+</li>
+</ol>
+<hr />
+<h2 id="key-components">Key Components</h2>
+<h3 id="1-scene-initialization-init-function">1. Scene Initialization (<code>init()</code> Function)</h3>
+<pre><code>// create GUI to switch between fx
+const gui = new GUI()
+    var stereofx =
+    gui.addFolder('Stereo Camera');
+    gui.add(settings,'Effects',['Stereo','Anaglyph','Parallax']).onChange(function(value){
+        switchEffect(value);
+    });
+    gui.open()
+    var curreffect = settings.Effects;
+    container = document.createElement( 'div' );
+    document.body.appendChild( container );
+
+    camera = new THREE.PerspectiveCamera( 60, window.innerWidth / window.innerHeight, 1, 100000 );
+    camera.position.z = 3200;
+
+    scene = new THREE.Scene();
+
+    // Environment rendered as Cubemap
+    scene.background = new THREE.CubeTextureLoader()
+.setPath( 'textures/cubemaps/' )
+.load( [
+    'px.png',
+    'nx.png',
+    'py.png',
+    'ny.png',
+    'pz.png',
+    'nz.png'
+] );
+</code></pre>
+<ul>
+<li>GUI Creation: Utilizes <code>dat.GUI</code> to create an interface for selecting rendering effects.</li>
+<li>Environment Setup: Establishes the 3D environment, including a container for the scene, camera, textures, materials, and sphere meshes.</li>
+<li>Renderer Configuration: Configures the WebGL renderer and sets its pixel ratio.</li>
+</ul>
+<hr />
+<h3 id="2-effect-switching-switcheffectvalue-function">2. Effect Switching (<code>switchEffect(value)</code> Function)</h3>
+<pre><code>function switchEffect(value){
+    if(value == 'Stereo'){
+        effect = new StereoEffect( renderer );
+        effect.setSize( window.innerWidth, window.innerHeight );
+    }
+    if(value == 'Anaglyph'){
+        effect = new AnaglyphEffect(renderer);
+        effect.setSize(window.innerWidth, window.innerHeight );
+    }
+    if(value == 'Parallax'){
+        effect = new ParallaxBarrierEffect(renderer);
+        effect.setSize(window.innerWidth, window.innerHeight);
+    }
+
+
+}
+</code></pre>
+<ul>
+<li>Effect Handling: Dynamically switches the rendering effect based on user selection in the GUI (Stereo, Anaglyph, Parallax).</li>
+</ul>
+<h3 id="3-event-handling">3. Event Handling</h3>
+<pre><code>function onWindowResize() {
+
+    windowHalfX = window.innerWidth / 2;
+    windowHalfY = window.innerHeight / 2;
+
+    camera.aspect = window.innerWidth / window.innerHeight;
+    camera.updateProjectionMatrix();
+
+    effect.setSize( window.innerWidth, window.innerHeight );
+
+
+}
+</code></pre>
+<ul>
+<li>Window Resize: Adjusts camera aspect ratio and effect size upon window resize.</li>
+</ul>
+<pre><code>function onDocumentMouseMove( event ) {
+
+    mouseX = ( event.clientX - windowHalfX ) * 10;
+    mouseY = ( event.clientY - windowHalfY ) * 10;
+
+}
+</code></pre>
+<ul>
+<li>Mouse Movement: Tracks mouse movement to control the camera's position and orientation.</li>
+</ul>
+<h3 id="4animation-loop">4.Animation Loop</h3>
+<pre><code>function animate() {
+
+    requestAnimationFrame( animate );
+    render();
+
+}
+</code></pre>
+<ul>
+<li><code>animate()</code> Function: Starts the animation loop using requestAnimationFrame.</li>
+</ul>
+<pre><code>function render() {
+
+    const timer = 0.0001 * Date.now();
+
+    camera.position.x += ( mouseX - camera.position.x ) * .05;
+    camera.position.y += ( - mouseY - camera.position.y ) * .05;
+    camera.lookAt( scene.position );
+
+    for ( let i = 0, il = spheres.length; i &lt; il; i ++ ) {
+
+        const sphere = spheres[ i ];
+
+        sphere.position.x = 5000 * Math.cos( timer + i );
+        sphere.position.y = 5000 * Math.sin( timer + i * 1.1 );
+
+    }
+
+    effect.render( scene, camera );
+
+}
+</code></pre>
+<ul>
+<li><code>render()</code> Function: Updates the scene elements and camera positions based on mouse movement and time, then renders the selected effect.</li>
+</ul>
+<h3 id="breakdown-of-operations">Breakdown of Operations</h3>
+<ul>
+<li>GUI Setup: Enables users to choose between rendering effects.</li>
+<li>Scene Creation: Generates a 3D environment with spheres positioned randomly within the scene.</li>
+<li>Rendering Pipeline: Facilitates rendering through WebGL using different effects.</li>
+<li>User Interaction: Captures mouse movement to dynamically control the camera's viewpoint.</li>
+<li>Responsive Design: Ensures the application adapts to window size changes for a consistent user experience.</li>
+</ul>
+<h3 id="overall-functionality">Overall Functionality</h3>
+<ul>
+<li>Interactive Visualization: Presents a 3D scene with the ability to switch between multiple rendering effects.</li>
+<li>Real-time Interaction: Allows users to manipulate the scene via mouse movement.</li>
+<li>Adaptive Rendering: Handles dynamic resizing of the viewport for consistent display across various window sizes.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project3/" class="btn btn-neutral float-left" title="Node Graph Visualizer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project1/" class="btn btn-neutral float-right" title="Interactive Mickey Lite-Brite Display">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project1/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
