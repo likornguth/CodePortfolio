@@ -105,8 +105,8 @@ NOTE: This algorithm only works for Directed Acyclic Graphs (DAG) , so the first
 
 
 ## Video Demo
-<video src="/src/DG_Visualizer.mp4" width="666" height="400" controls></video>
 
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HsE-eUiugmg?si=4fexdFALnTN6kXFV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
 ---- 
 
 ## 3. Technical Specifications
