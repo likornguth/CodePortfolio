@@ -12,32 +12,31 @@
 ---
 ### Resume
 
-[<img src="src/Screenshot 2023-12-05 at 4.10.04 PM.png" style="width: 10vw;">](./src/sweresume.pdf)
+[<img src="src/Screenshot 2023-12-05 at 4.10.04 PM.png" style="width: 10vw;">](./src/General_CG_Resume.pdf)
 
 [![Button Example]][Link]
 <!----------------------------------------------------------------------------->
-[Link]: ./src/sweresume.pdf 'Link with example title.'
+[Link]: ./src/General_CG_Resume.pdf 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
 
 -------
-
-### Research Interests
-* 3D Graphics & Rendering 
-* Physics-Based Animation
-* UX/UI Design
-* AI Aesthetics
-
----
-
 ### Past Roles
-* Research & Development - <i>CLO Virtual Fashion</i>
-* Animation Production - <i>Partizan Studio</i>
+* Research & Development Intern - <i>CLO Virtual Fashion</i>
+* Animation Production Intern- <i>Partizan Studio</i>
 * Web Graphics Developer - <i>Leo Villareal Studio</i>
 * AI Research Fellow - <i>The Center For Effective Altruism</i>
-* Immersive Experience Design - <i>MERGE</i>
+* Immersive Experience Design Intern - <i>MERGE</i>
 
 ---
+### Research Interests
+* 3D Graphics & Rendering 
+* Physically-Based Simulation
+* UX/UI Design
+
+---
+
+
 
 ## Projects
 
