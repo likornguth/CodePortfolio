@@ -52,18 +52,6 @@
 * Physically-Based Simulation
 * UX/UI Design
 
----
-
-
-
-## Projects
-
-* [Interactive Mickey Lite-Brite Display ](project1.md)
-* [WebGL Stereoscope Effect](project2.md)
-* [Node Graph Visualizer](project3.md)
-* [OpenGL Mesh Viewer](project4.md)
-* [Ray Tracing Engine](project5.md)
-* [VR Music Video](project6.md)
 
 ------
 
