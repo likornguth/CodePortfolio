@@ -1,6 +1,13 @@
 # OpenGL Mesh Viewer
 ![Alt text](src/olio_mesh_view_COPY.png)
 ## OpenGL-based Mesh Viewer Implementation
+
+[![Button Icon]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: https://github.com/likornguth/OpenGL_MeshViewer 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
+
 ---- 
 ### Objective
 The task involves creating an OpenGL-based mesh viewer capable of displaying multiple models simultaneously, each shaded using the Blinn-Phong illumination model. User interaction functionalities, such as mouse-driven model rotation and camera movement, are also implemented. The viewer is expected to load models, apply transformations for scaling and positioning, and render them alongside interactions and appropriate lighting effects.

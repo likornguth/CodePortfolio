@@ -8,6 +8,12 @@
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Example]: https://img.shields.io/badge/Check_it_out_>-37a779?style=for-the-badge
 
+[![Button Icon]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: https://github.com/likornguth/LiteBrite 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
+
 
 ## Project Description:
 This technical project involves creating an interactive 3D scene that recreates a classic children's toy and a customizable lighting setup using the Three.js library. The scene consists of a 3D Mickey Mouse lightbox and a desk-like structure, with various elements that can be controlled and customized.

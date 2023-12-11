@@ -10,6 +10,12 @@ The application sets up a 3D scene containing multiple spheres and allows users 
 [Button Example]: https://img.shields.io/badge/Check_it_out_>-37a779?style=for-the-badge
 
 
+[![Button Icon]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: https://github.com/likornguth/StereoCamera 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
+
 
 ![Alt text](<src/Screenshot 2023-12-05 at 1.34.40 PM.png>)
 
