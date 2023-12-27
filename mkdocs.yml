@@ -1,4 +1,4 @@
-site_name: My Docs
+site_name: Interactive Graphics Portfolio
 nav:
   - Home: index.md
   - Web-Based IK Rig & Keyframe Editor: project0.md
