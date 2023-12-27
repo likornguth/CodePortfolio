@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Web-Based IK Rig & Keyframe Editor - My Docs</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Web-Based IK Rig \u0026 Keyframe Editor";
+        var mkdocs_page_input_path = "project0.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> My Docs
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Web-Based IK Rig & Keyframe Editor</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#scene-controls">Scene Controls</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#gui">GUI</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keyframe-editor">Keyframe Editor</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#project-overview">Project Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#core-functionalities">Core Functionalities</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-rendering-and-animation-loop">1.   Rendering and Animation Loop:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-3d-models">2.   3D Models:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#4-inverse-kinematics-ik-implementation">4.   Inverse Kinematics (IK) Implementation:</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#algorithm">Algorithm:</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#joint-constraint">Joint Constraint :</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#solution-custom-flexibility">Solution: Custom Flexibility:</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#keyframe-editor-implementation">Keyframe Editor Implementation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#functionality">Functionality</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#key-components">Key Components</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#timeline">Timeline</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#toolbar-functions">Toolbar Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#technologies-used">Technologies Used</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#conclusion">Conclusion</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project2/">WebGL Stereoscopic Display</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Mickey Lite-Brite Display</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">My Docs</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Web-Based IK Rig & Keyframe Editor</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="web-based-ik-rig-keyframe-editor">Web-Based IK Rig &amp; Keyframe Editor:</h1>
+<hr />
+<iframe src="https://ik-rig-tool.vercel.app/" width = "700" height = "700"> 
+</iframe>
+
+<p><a href="https://github.com/likornguth/IK_Rig_Tool" title="Link with example title."><img alt="Button Example" src="https://img.shields.io/badge/Open_in_new_window_&gt;-37a779?style=for-the-badge" />  </a></p>
+<!----------------------------------------------------------------------------->
+<!---------------------------------[ Buttons ]--------------------------------->
+<p><a href="https://github.com/likornguth/IK_Rig_Tool" title="Link with example title."><img alt="Button Icon" src="https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&amp;logoColor=white&amp;logo=GitHub" /></a></p>
+<!----------------------------------------------------------------------------->
+<!---------------------------------[ Buttons ]--------------------------------->
+<hr />
+<h3 id="scene-controls">Scene Controls</h3>
+<p>Orbit controls are implemented for easy control and maneuvering around this 3D scene.  Both the scene and controls are centered about the origin.</p>
+<table>
+<thead>
+<tr>
+<th>Cmd</th>
+<th>Ctrl</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Zoom in</td>
+<td><i>Scroll forward</i></td>
+</tr>
+<tr>
+<td>Zoom out</td>
+<td><i>Scroll backward</i></td>
+</tr>
+<tr>
+<td>Tilt</td>
+<td><i>Drag up/down </i></td>
+</tr>
+<tr>
+<td>Pan</td>
+<td><i>Drag left/right </i></td>
+</tr>
+</tbody>
+</table>
+<h3 id="gui">GUI</h3>
+<table>
+<thead>
+<tr>
+<th>Control</th>
+<th>Details</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Show IK</td>
+<td>Toggle on/off to show/hide the mesh skeleton</td>
+</tr>
+<tr>
+<td>Show Transform</td>
+<td>Toggle on/off to show/hide the target object for the rig</td>
+</tr>
+<tr>
+<td>Parent</td>
+<td>Higher of the two bones in the selected joint in the bone hierarchy</td>
+</tr>
+<tr>
+<td>Child</td>
+<td>Lower of the two bones in the selected joint in the bone hierarchy</td>
+</tr>
+<tr>
+<td>Rotation min/max</td>
+<td>Min and Max amount (in radians) the selected joint is allowed to rotate</td>
+</tr>
+</tbody>
+</table>
+<h3 id="keyframe-editor">Keyframe Editor</h3>
+<p>This project provides a JavaScript-based keyframing tool for animating 3D models. The tool allows users to set keyframes at specific times, enabling the creation of smooth animations over time.</p>
+<table>
+<thead>
+<tr>
+<th>Function</th>
+<th>Button</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Add Keyframe</td>
+<td><i class="fa fa-solid fa-plus"></i></td>
+</tr>
+<tr>
+<td>Remove Keyframe</td>
+<td><i class="fa fa-solid fa-minus"></i></td>
+</tr>
+<tr>
+<td>Start Playback</td>
+<td><i class="fa fa-play"></i></td>
+</tr>
+<tr>
+<td>Pause Playback</td>
+<td><i class="fa fa-pause"></i></td>
+</tr>
+<tr>
+<td>Scrub/Step</td>
+<td><i class="fa fa-solid fa-left-right"></i></td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="project-overview">Project Overview</h2>
+<p>The project offers technical artists a streamlined toolset for rigging and animating 3D models efficiently. By leveraging inverse kinematics, keyframe animation tools, a user-friendly GUI, and interactive controls, it provides a simple and intuitive environment for creating and manipulating skeletal structures and animations within a web-based 3D graphics application.</p>
+<h2 id="core-functionalities">Core Functionalities</h2>
+<h3 id="1-rendering-and-animation-loop"><strong>1.   Rendering and Animation Loop:</strong></h3>
+<p>Manages rendering with a timestamp and frame number, incorporating the IK solver and timeline for playback control.</p>
+<pre><code>function render(timestamp, frame) {
+  IKSolver?.update();
+  const delta = clock.getDelta();
+  if(playing){
+    timeline.setTime(start*1000 + (1000*(clock.elapsedTime + delta) % (loopduration*1000)));
+  }
+  if(mixer){
+    mixer.update(delta);
+  }
+  renderer.render(scene, camera);
+}
+
+</code></pre>
+<h3 id="2-3d-models"><strong>2.   3D Models:</strong></h3>
+<p>All 3D Models were custom built for this project with Blender</p>
+<table>
+<thead>
+<tr>
+<th>imac.glb</th>
+<th>succulent.glb</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><img alt="Alt text" src="../src/Screenshot%202023-12-26%20at%2012.49.48%20PM.png" /></td>
+<td><img alt="Alt text" src="../src/Screenshot%202023-12-26%20at%2012.52.43%20PM.png" /></td>
+</tr>
+</tbody>
+</table>
+<ul>
+<li>Imports 3D models using GLTFLoader.</li>
+<li>Models were imported as .glb files</li>
+</ul>
+<h3 id="4-inverse-kinematics-ik-implementation"><strong>4.   Inverse Kinematics (IK) Implementation:</strong></h3>
+<h4 id="algorithm">Algorithm:</h4>
+<p>A <i>Cyclic Coordinate Descent (CCD)</i> Solver is an algorithm used in 3D graphics and simulations, particularly in rigging for animation and robotics. It's employed in solving the <a href="https://www.mathworks.com/discovery/inverse-kinematics.html">inverse kinematics</a> problem in multi-joint chains.  It is ideal for real-time/web-based applications due to its efficiency.</p>
+<p><img alt="Alt text" src="../src/ccdik.png" /></p>
+<ul>
+<li>
+<p><b>Functionality</b>: The CCD Solver iteratively adjusts joint angles within a chain-like structure, altering one joint at a time to achieve a desired position or orientation for the end-effector.</p>
+</li>
+<li>
+<p><b>Process</b>: It starts from the end-effector and iterates backward, adjusting each joint's angles in a cyclic manner. The adjustments aim to align the end-effector with the target position or orientation.</p>
+</li>
+<li>
+<p><b>Efficiency</b>: CCD is computationally efficient and well-suited for systems with interconnected joints. It often converges rapidly toward the target, especially in systems where simple, iterative solutions are effective.</p>
+</li>
+</ul>
+<p><strong>THREE.js CCDIK Implementation:</strong></p>
+<iframe width = "680" height = "350" src="https://threejs.org/docs/scenes/ccdiksolver-browser.html"></iframe>
+
+<hr />
+<ul>
+<li>
+<p>Utilizes a CCD IK solver for manipulating skeletal structures.</p>
+<pre><code>const iks = [
+    {
+        target: 5, // "target"
+        effector: 4, // "bone3"
+        links: [ { index: 3 }, { index: 2 }, { index: 1 } ] // "bone2", "bone1", "bone0"
+    }
+];
+</code></pre>
+</li>
+<li>
+<p>Constructs bone hierarchies</p>
+<pre><code>    // Bones hierarchy:
+    //
+    //   root
+    //     ├── bone0
+    //     │    └── bone1
+    //     │          └── bone2
+    //     │                └── bone3
+    //     └── target
+</code></pre>
+</li>
+<li>
+<p>Allows position transformations of IK target object</p>
+<pre><code>    // Positioned as follow on the cylinder:
+    //
+    //        o      &lt;- target      (y =  20)
+    //        
+    //   +----o----+ &lt;- bone3       (y =  12)
+    //   |         |
+    //   |    o    | &lt;- bone2       (y =   4)
+    //   |         |
+    //   |    o    | &lt;- bone1       (y =  -4)
+    //   |         |
+    //   +----oo---+ &lt;- root, bone0 (y = -12)
+</code></pre>
+</li>
+</ul>
+<h4 id="joint-constraint"><strong>Joint Constraint :</strong></h4>
+<ul>
+<li>IK calculations with unlimited joint rotation are unstable and difficult for 3D animators to control </li>
+<li>The solver will often produce undesirable effects when pushed to extremes of possible joint configurations:</li>
+</ul>
+<table>
+<thead>
+<tr>
+<th>Loose Constraints</th>
+<th>Tight Constraints</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><iframe src="https://giphy.com/embed/9garbt4m3DkIL61Drb" width="480*0.9" height="316*0.9" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p></td>
+<td><iframe src="https://giphy.com/embed/JdTZDl9BqrQkOOx2E8" width="480*.9" height="316*.9" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p></p></td>
+</tr>
+</tbody>
+</table>
+<h4 id="solution-custom-flexibility"><strong>Solution: Custom Flexibility:</strong></h4>
+<ul>
+<li>Setting a limit on the range of motion of each joint increases the overall stability of the IK rig</li>
+<li>GUI panel contains joint-wise rotation constraint adjustments.</li>
+<li>Parent child relationships are exposed in the menu as well</li>
+</ul>
+<hr />
+<h2 id="keyframe-editor-implementation">Keyframe Editor Implementation</h2>
+<h3 id="functionality">Functionality</h3>
+<p>The tool uses a JavaScript library to manage keyframes and timeline interactions. Keyframes are stored as time-value pairs, representing the position of the 3D model at specific points in time. Playback controls manage the animation flow, utilizing the provided clock to control timing.</p>
+<h3 id="key-components">Key Components</h3>
+<h4 id="timeline">Timeline</h4>
+<ul>
+<li>interface that displays keyframes and manages animation time.<pre><code>let positionKF = new VectorKeyframeTrack( ".position", times, values )
+let rows = [
+    {
+        keyframes: [
+            { 
+                val: 0, 
+            },
+        ]
+    }
+];
+
+timeline = new timelineModule.Timeline({id:'timeline'})
+timeline.setModel({ rows: rows });
+</code></pre>
+</li>
+</ul>
+<h3 id="toolbar-functions">Toolbar Functions</h3>
+<p>The code is structured into functions for:</p>
+<p><strong><code>setUpAnimation()</code></strong> : Initialize keyframe tracks and turns IK target position into keyframable attribute</p>
+<pre><code>function setupAnimation(){
+  const positionKF = new VectorKeyframeTrack(
+    &quot;.position&quot;,
+    times,
+    values
+  )
+  const tracks = [positionKF];
+  const length = -1;
+  const clip = new AnimationClip(&quot;movetarget&quot;,length,tracks);
+  mixer = new AnimationMixer(handleBone);
+  action = mixer.clipAction(clip);
+}
+</code></pre>
+<p><strong><code>addKeyframe()</code></strong>: Adding keyframes based on the current time and model position.</p>
+<pre><code>function addKeyframe() {
+    if (timeline) {
+      const currentModel = timeline.getModel();
+      currentModel.rows[0].keyframes.push({ val: timeline.getTime() });
+      timeline.setModel(currentModel);
+
+      values.push(handleBone.position.x, handleBone.position.y, handleBone.position.z);
+      times.push(timeline.getTime()/1000);
+
+      // if loop is affected, update the start, end and duration
+      start = Math.min.apply(Math, times);
+      end = Math.max.apply(Math, times);
+      loopduration = end - start;
+
+      // replace old keyframe track with updated one
+      tracks = [new VectorKeyframeTrack(
+        &quot;.position&quot;,times,values)];
+      length = -1;
+
+    }
+  }
+
+</code></pre>
+<hr />
+<p><strong><code>removeKeyframe()</code></strong> : Removing selected keyframes from the timeline.</p>
+<pre><code>function removeKeyframe() {
+
+      // delete values and times entry
+      let temp = [];
+      let idx;
+      for(const i in times){
+        //console.log(i,t);
+        if(times[i]!=t){
+          temp.push(Number(times[i]));
+        }
+        else{
+          // save index so we know which values to remove
+          idx = i;
+        }
+      }
+      times = temp;
+      console.log(&quot;after:&quot;, times);
+
+      let temp2 = [];
+      for(const j in values){
+        // x y and z of position vector at index i (each index has width 3)
+        if(j != 3*idx){
+          if(j!= 3*idx+1){
+            if(j!= 3*idx +2){
+              temp2.push(Number(values[j]));
+            }
+          }
+        }
+      }
+    }
+
+</code></pre>
+<hr />
+<p><strong><code>onPlayClick()</code>/ <code>onPauseClick()</code> </strong>: Handling play, pause, and time update events.</p>
+<pre><code>function onPlayClick(event) {
+    action.play();
+    clock.start();
+
+    playing = true;
+
+    start = Math.min.apply(Math, times);
+    end = Math.max.apply(Math, times);
+    loopduration = end - start;
+
+    if (timeline) {
+      // Don't allow to manipulate timeline during playing (optional).
+      timeline.setOptions({ timelineDraggable: false });
+    }
+}
+
+</code></pre>
+<p><strong><code>interpolate()</code></strong> : Interpolates between keyframes to create smooth animation transitions: </p>
+<pre><code>function interpolate(start, end, t){
+
+    const x = start.x + (end.x - start.x) * t;
+    const y = start.y + (end.y - start.y) * t;
+    const z = start.z + (end.z - start.z) * t;
+    return new THREE.Vector3(x, y, z);
+}
+</code></pre>
+<p><strong><code>timeline.onTimeChanged()</code></strong> : For scrubbing/stepping through paused timeline:</p>
+<pre><code>    onTimeChanged(){
+        time = timeline.getTime();
+        min = timeline.values.getMax();
+        max = timeline.values.getMin();
+
+        // minmax problem:
+        // max = maximum value less than time
+        // min = minimum value greater than time
+
+        if(time &lt; min &amp;&amp; time &gt; max){
+
+            let minidx, maxidx;
+
+            for(const k in kf){
+
+                let currval =kf[k].val;
+                if(currval &lt;= min &amp;&amp; currval &gt; time){
+                    // upper bound
+                    min = kf[k].val;
+                    minidx = k;
+                }
+                if(currval &gt;= max &amp;&amp; currval &lt; time){
+                    // lower bound
+                    max = kf[k].val;
+                    maxidx = k;
+                }
+            }
+
+            const v1 = new THREE.Vector3(values[3*minidx],values[3*minidx+1],values[3*minidx+2]);
+            const v2 = new THREE.Vector3(values[3*maxidx],values[3*maxidx+1],values[3*maxidx+2]);
+
+            const t = (time-max)/(min-max);
+
+            currPos = interpolate(v2, v1,t);
+
+            handleBone.position.x = currPos.x;
+            handleBone.position.y = currPos.y;
+            handleBone.position.z = currPos.z;
+        }
+
+    }
+</code></pre>
+<p>The tool is built upon a JavaScript library, offering an intuitive interface for users to create and manage keyframed animations for 3D models.</p>
+<h3 id="technologies-used">Technologies Used</h3>
+<ul>
+<li><strong>WebGL:</strong> Renders 3D graphics in the browser.</li>
+<li><strong>Three.js:</strong> JavaScript library for 3D graphics.</li>
+<li><strong>GLTF format:</strong> Efficient file format for 3D scenes and models.</li>
+</ul>
+<h2 id="conclusion">Conclusion</h2>
+<p>This project offers technical artists a robust toolset for rigging and animating 3D models. Leveraging inverse kinematics, an intuitive GUI, and interactive controls, it provides a comprehensive environment for creating and manipulating skeletal structures and animations within a web-based 3D graphics application.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href=".." class="btn btn-neutral float-left" title="Home"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project3/" class="btn btn-neutral float-right" title="Node Graph Visualizer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href=".." style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project3/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
