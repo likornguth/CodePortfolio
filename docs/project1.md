@@ -8,9 +8,9 @@
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Example]: https://img.shields.io/badge/Check_it_out_>-37a779?style=for-the-badge
 
-[![Button Icon]][Link]
+[![Button Icon]][Link2]
 <!----------------------------------------------------------------------------->
-[Link]: https://github.com/likornguth/LiteBrite 'Link with example title.'
+[Link2]: https://github.com/likornguth/LiteBrite 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
 

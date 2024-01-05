@@ -141,7 +141,7 @@
 <iframe src="https://ik-rig-tool.vercel.app/" width = "700" height = "700"> 
 </iframe>
 
-<p><a href="https://github.com/likornguth/IK_Rig_Tool" title="Link with example title."><img alt="Button Example" src="https://img.shields.io/badge/Open_in_new_window_&gt;-37a779?style=for-the-badge" />  </a></p>
+<p><a href="https://ik-rig-tool.vercel.app/" title="Link with example title."><img alt="Button Example" src="https://img.shields.io/badge/Fullscreen_&gt;-37a779?style=for-the-badge" />  </a></p>
 <!----------------------------------------------------------------------------->
 <!---------------------------------[ Buttons ]--------------------------------->
 <p><a href="https://github.com/likornguth/IK_Rig_Tool" title="Link with example title."><img alt="Button Icon" src="https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&amp;logoColor=white&amp;logo=GitHub" /></a></p>
@@ -365,7 +365,7 @@
 <hr />
 <h2 id="keyframe-editor-implementation">Keyframe Editor Implementation</h2>
 <h3 id="functionality">Functionality</h3>
-<p>The tool uses a JavaScript library to manage keyframes and timeline interactions. Keyframes are stored as time-value pairs, representing the position of the 3D model at specific points in time. Playback controls manage the animation flow, utilizing the provided clock to control timing.</p>
+<p>The tool uses the <code>animation-js</code> javascript package to manage keyframes and timeline interactions. Keyframes are stored as time-value pairs, representing the position of the 3D model at specific points in time. Playback controls manage the animation flow, utilizing the provided clock to control timing.</p>
 <h3 id="key-components">Key Components</h3>
 <h4 id="timeline">Timeline</h4>
 <ul>
@@ -530,12 +530,14 @@ timeline.setModel({ rows: rows });
 
     }
 </code></pre>
-<p>The tool is built upon a JavaScript library, offering an intuitive interface for users to create and manage keyframed animations for 3D models.</p>
+<p>The tool offers an intuitive interface </p>
 <h3 id="technologies-used">Technologies Used</h3>
 <ul>
-<li><strong>WebGL:</strong> Renders 3D graphics in the browser.</li>
-<li><strong>Three.js:</strong> JavaScript library for 3D graphics.</li>
-<li><strong>GLTF format:</strong> Efficient file format for 3D scenes and models.</li>
+<li><strong><code>WebGL</code>:</strong> Renders 3D graphics in the browser.</li>
+<li><strong><code>Three.js</code>:</strong> JavaScript library for 3D graphics.</li>
+<li><strong><code>GLTF</code>:</strong> Efficient file format for 3D scenes and models.</li>
+<li><strong><code>dat.gui</code>:</strong> interactive GUI controls</li>
+<li><strong><code>animation-timeline-js</code>:</strong> Javascript package for users to create and manage keyframed animations for 3D models.</li>
 </ul>
 <h2 id="conclusion">Conclusion</h2>
 <p>This project offers technical artists a robust toolset for rigging and animating 3D models. Leveraging inverse kinematics, an intuitive GUI, and interactive controls, it provides a comprehensive environment for creating and manipulating skeletal structures and animations within a web-based 3D graphics application.</p>

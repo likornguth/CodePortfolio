@@ -3,16 +3,24 @@
 
 <i>I am a creative technologist based in Los Angeles, CA.  I am passionate about implementing code to optimize artistic workflows, as well as leveraging design concepts to create intuitive and aesthetic interfaces for artists and developers alike.</i>
 
+---
+
+### Research Interests
+* 3D Graphics & Rendering 
+* Physically-Based Simulation
+* UX/UI Design
 
 ---
 
 
 
 ### Education
-* <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
+![Alt text](src/columbia_university_logo.jpeg) <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
+
+--- 
 
 ### Certificates
-* <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing</i> (In Progress)
+![Alt text](src/stanford_university_logo.jpeg)  <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing</i> (In Progress)
 
 ---
 ### Resume
@@ -39,18 +47,28 @@
 [Button Icon2]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 
 -------
-### Past Roles
-* Research & Development Intern - <i>CLO Virtual Fashion</i>
-* Animation Production Intern- <i>Partizan Studio</i>
-* Web Graphics Developer - <i>Leo Villareal Studio</i>
-* AI Research Fellow - <i>The Center For Effective Altruism</i>
-* Immersive Experience Design Intern - <i>MERGE</i>
+### <u>Past Roles</u>
+
+
+![Alt text](src/clo_virtual_fashion_inc__logo.jpeg)    Research & Development Intern - [CLO Virtual Fashion](https://www.linkedin.com/company/3214836/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
 
 ---
-### Research Interests
-* 3D Graphics & Rendering 
-* Physically-Based Simulation
-* UX/UI Design
+
+![Alt text](src/1631305416543.jpeg)    Animation Production Intern- [Partizan Studio](https://www.linkedin.com/company/37907/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+
+---
+
+![Alt text](src/leo_villareal_studio_logo.jpeg) Web   Graphics Developer - [Leo Villareal Studio](https://villareal.net/)
+
+---
+
+![Alt text](src/ea_logo.jpeg) AI Research Fellow -    [The Center For Effective Altruism](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+---
+
+![Alt text](src/mergeworld_logo.jpeg)   Immersive Experience Design Intern - [MERGE](https://www.linkedin.com/company/27237129/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+
 
 
 ------

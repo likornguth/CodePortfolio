@@ -8,11 +8,11 @@
 <!----------------------------------------------------------------------------->
 [Link]: https://ik-rig-tool.vercel.app/ 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
-[Button Example]: https://img.shields.io/badge/Open_in_new_window_>-37a779?style=for-the-badge
+[Button Example]: https://img.shields.io/badge/Fullscreen_>-37a779?style=for-the-badge
 
-[![Button Icon]][Link]
+[![Button Icon]][Link2]
 <!----------------------------------------------------------------------------->
-[Link]: https://github.com/likornguth/IK_Rig_Tool 'Link with example title.'
+[Link2]: https://github.com/likornguth/IK_Rig_Tool 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
 
@@ -176,7 +176,7 @@ A <i>Cyclic Coordinate Descent (CCD)</i> Solver is an algorithm used in 3D graph
 
 ### Functionality
 
-The tool uses a JavaScript library to manage keyframes and timeline interactions. Keyframes are stored as time-value pairs, representing the position of the 3D model at specific points in time. Playback controls manage the animation flow, utilizing the provided clock to control timing.
+The tool uses the `animation-js` javascript package to manage keyframes and timeline interactions. Keyframes are stored as time-value pairs, representing the position of the 3D model at specific points in time. Playback controls manage the animation flow, utilizing the provided clock to control timing.
 
 ### Key Components
 
@@ -362,15 +362,17 @@ function onPlayClick(event) {
         
 
 
-The tool is built upon a JavaScript library, offering an intuitive interface for users to create and manage keyframed animations for 3D models.
+The tool offers an intuitive interface 
 
 
 
 
 ### Technologies Used
-- **WebGL:** Renders 3D graphics in the browser.
-- **Three.js:** JavaScript library for 3D graphics.
-- **GLTF format:** Efficient file format for 3D scenes and models.
+- **`WebGL`:** Renders 3D graphics in the browser.
+- **`Three.js`:** JavaScript library for 3D graphics.
+- **`GLTF`:** Efficient file format for 3D scenes and models.
+- **`dat.gui`:** interactive GUI controls
+- **`animation-timeline-js`:** Javascript package for users to create and manage keyframed animations for 3D models.
 
 ## Conclusion
 This project offers technical artists a robust toolset for rigging and animating 3D models. Leveraging inverse kinematics, an intuitive GUI, and interactive controls, it provides a comprehensive environment for creating and manipulating skeletal structures and animations within a web-based 3D graphics application.
