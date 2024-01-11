@@ -3,6 +3,9 @@
 ## Overview
 The application sets up a 3D scene containing multiple spheres and allows users to switch between different rendering effects: Stereo, Anaglyph, and Parallax. It offers real-time interaction by capturing mouse movements to control the camera's position and direction.
 
+<iframe src="https://stereo-camera.vercel.app/" width = "700" height = "500"> 
+</iframe>
+
 [![Button Example]][Link]
 <!----------------------------------------------------------------------------->
 [Link]: https://stereo-camera.vercel.app/ 'Link with example title.'
@@ -17,12 +20,14 @@ The application sets up a 3D scene containing multiple spheres and allows users 
 [Button Icon]: https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&logoColor=white&logo=GitHub
 
 
-![Alt text](<src/Screenshot 2023-12-05 at 1.34.40 PM.png>)
 
 -------
 
 ## What is Stereoscopic Rendering?
 Stereoscopic rendering is based on the principle of presenting two slightly different images to each eye, mimicking the way human eyes perceive depth in the real world. It involves:
+
+![Alt text](<src/Screenshot 2023-12-05 at 1.34.40 PM.png>)
+
 
 1. <b>Dual Perspective Rendering: </b>
 Two separate views of the scene, representing the left-eye and right-eye perspectives, are generated. These views simulate the slight offset observed by each eye in a natural setting.
