@@ -1,12 +1,13 @@
-site_name: Interactive Graphics Portfolio
+site_name: Creative Technology Portfolio
 nav:
   - Home: index.md
   - Web-Based IK Rig & Keyframe Editor: project0.md
   - Node Graph Visualizer: project3.md
-  - WebGL Stereoscopic Display: project2.md
   - Interactive Mickey Lite-Brite Display: project1.md
   - OpenGL Mesh Viewer: project4.md
   - VR Music Video: project6.md
+  - Animation Reel: https://youtu.be/pZt7602uW6c?si=uqKWJ8O0utF4P-99
+  - Art Portfolio: https://www.lindsaykornguth.com/
   
 
 theme: readthedocs

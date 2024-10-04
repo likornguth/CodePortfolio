@@ -1,38 +1,22 @@
 # Hello, my name is Lindsay 
 
+<iframe src="https://avatar-project-one.vercel.app/" width = "700" height = "350"> 
+</iframe>
+
+
+---
 
 <i>I am a creative technologist based in Los Angeles, CA.  I am passionate about implementing code to optimize artistic workflows, as well as leveraging design concepts to create intuitive and aesthetic interfaces for artists and developers alike.</i>
 
 ---
 
-### Research Interests
-* 3D Graphics & Rendering 
-* Physically-Based Simulation
-* UX/UI Design
-
----
-
-
-
-### Education
-![Alt text](src/columbia_university_logo.jpeg) <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
-
---- 
-
-### Certificates
-![Alt text](src/stanford_university_logo.jpeg)  <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing</i> (In Progress)
-
----
-### Resume
-
-[<img src="src/Screenshot 2023-12-05 at 4.10.04 PM.png" style="width: 10vw;">](./src/sweresume.pdf)
-
-[![Button Example]][Link]
-<!----------------------------------------------------------------------------->
-[Link]: ./src/sweresume.pdf 'Link with example title.'
-<!---------------------------------[ Buttons ]--------------------------------->
 [Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
 
+[![Button Icon5]][Link2]
+<!----------------------------------------------------------------------------->
+[Link5]: https://www.youtube.com/@liko_music 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon5]: https://img.shields.io/badge/YouTube-EF2D5E?style=for-the-badge&color=red&logoColor=white&logo=YouTube
 
 [![Button Icon]][Link]
 <!----------------------------------------------------------------------------->
@@ -46,30 +30,61 @@
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Icon2]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 
+
 -------
-### <u>Past Roles</u>
+
+### Education
+![Alt text](src/columbia_university_logo.jpeg) <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
+
+--- 
+
+### Certificates
+![Alt text](src/stanford_university_logo.jpeg)  <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing </i> (GPA: 4.3)
+
+---
+### Resume
+
+[<img src="src/resume_screenshot.png" style="width: 10vw;">](./src/Creative_Tech_Resume.pdf)
+
+[![Button Example]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: ./src/Creative_Tech_Resume.pdf 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
 
 
-![Alt text](src/clo_virtual_fashion_inc__logo.jpeg)    Research & Development Intern - [CLO Virtual Fashion](https://www.linkedin.com/company/3214836/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+-------
+### <u>Work Experience</u>
+
+
+![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) General Technical Director Intern - [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
+
+![Alt text](src/clo_virtual_fashion_inc_logo.png)    Research & Development Intern - [CLO Virtual Fashion](https://www.linkedin.com/company/3214836/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
 
 ---
 
-![Alt text](src/1631305416543.jpeg)    Animation Production Intern- [Partizan Studio](https://www.linkedin.com/company/37907/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+![Alt text](src/partizan_logo.png)    Animation Production Intern- [Partizan Studio](https://www.linkedin.com/company/37907/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
 
 ---
 
-![Alt text](src/leo_villareal_studio_logo.jpeg) Web   Graphics Developer - [Leo Villareal Studio](https://villareal.net/)
+![Alt text](src/villareal_logo.png) Web   Graphics Developer - [Leo Villareal Studio](https://villareal.net/)
 
 ---
 
-![Alt text](src/ea_logo.jpeg) AI Research Fellow -    [The Center For Effective Altruism](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+
+![Alt text](src/MERGE_Logo.jpg)   Immersive Experience Design Intern - [MERGE](https://www.linkedin.com/company/27237129/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+-------
+
+### <u>Volunteer Work</u>
+
+![Alt text](src/CU_EA.png) AI Research Fellow -    [Columbia University Effective Altruism](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
 
 ---
 
-![Alt text](src/mergeworld_logo.jpeg)   Immersive Experience Design Intern - [MERGE](https://www.linkedin.com/company/27237129/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+![Alt text](src/ucsfchildrens_logo.jpeg) Sports Medicine Assistant -    [UCSF Benioff Childrens' Hospital](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
 
-
-
+---
 
 ------
 

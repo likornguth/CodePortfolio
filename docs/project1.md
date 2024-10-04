@@ -1,5 +1,9 @@
 # Interactive 3D Lite-Brite Display with Customizable Lighting
-<img width="1316" alt="Screenshot 2023-11-08 at 12 37 19 PM" src="https://github.com/likornguth/LiteBrite/assets/97198397/128ae6c0-339a-4c42-87ea-8cbbfd07f0de">
+
+<iframe src="https://lite-brite-mickey.vercel.app/" width = "700" height = "400"> 
+</iframe>
+
+<!-- <img width="1316" alt="Screenshot 2023-11-08 at 12 37 19 PM" src="https://github.com/likornguth/LiteBrite/assets/97198397/128ae6c0-339a-4c42-87ea-8cbbfd07f0de"> -->
 
 
 [![Button Example]][Link]
