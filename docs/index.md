@@ -3,16 +3,24 @@
 <iframe src="https://avatar-project-one.vercel.app/" width = "700" height = "350"> 
 </iframe>
 
+[![SandboxIcon]][SandboxLink]
+<!----------------------------------------------------------------------------->
+[SandboxLink]: https://codesandbox.io/p/github/likornguth/AvatarProject/main?file=%2Fsrc%2FApp.js&workspaceId=dca2e2fc-dca1-451d-9762-a2fa4b50b229 'Open this project in interactive Code Sandbox Window'
+<!---------------------------------[ Buttons ]--------------------------------->
+[SandboxIcon]: https://img.shields.io/badge/Code_Sandbox-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=Square
+
 
 ---
 
 <i>I am a creative technologist based in Los Angeles, CA.  I am passionate about implementing code to optimize artistic workflows, as well as leveraging design concepts to create intuitive and aesthetic interfaces for artists and developers alike.</i>
 
+
+
 ---
 
 [Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
 
-[![Button Icon5]][Link2]
+[![Button Icon5]][Link5]
 <!----------------------------------------------------------------------------->
 [Link5]: https://www.youtube.com/@liko_music 'Link with example title.'
 <!---------------------------------[ Buttons ]--------------------------------->
