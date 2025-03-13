@@ -16,9 +16,33 @@
 
 
 
+
+### Education
+![Alt text](src/columbia_university_logo.jpeg) <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
+
+--- 
+
+### Certificates
+![Alt text](src/stanford_university_logo.jpeg)  <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing </i> (GPA: 4.3)
+
+---
+
+### Resume
+
+[<img src="src/resume_screenshot.png" style="width: 10vw;">](./src/Creative_Tech_Resume.pdf)
+
+[![Button Example]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: ./src/Creative_Tech_Resume.pdf 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+
+
 ---
 
 [Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
+
+[![imdb icon](src/IMDb-Icon.png)](https://www.imdb.com/name/nm16976654/)
+
 
 [![Button Icon5]][Link5]
 <!----------------------------------------------------------------------------->
@@ -38,31 +62,14 @@
 <!---------------------------------[ Buttons ]--------------------------------->
 [Button Icon2]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon12]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 
 -------
-
-### Education
-![Alt text](src/columbia_university_logo.jpeg) <b>Columbia University</b> ('19-'23) -  <i>Bachelor of Computer Science</i> (GPA: 3.8)
-
---- 
-
-### Certificates
-![Alt text](src/stanford_university_logo.jpeg)  <b>Stanford University</b> ('24-'25) - <i> Graduate Certificate in Visual Computing </i> (GPA: 4.3)
-
----
-### Resume
-
-[<img src="src/resume_screenshot.png" style="width: 10vw;">](./src/Creative_Tech_Resume.pdf)
-
-[![Button Example]][Link]
-<!----------------------------------------------------------------------------->
-[Link]: ./src/Creative_Tech_Resume.pdf 'Link with example title.'
-<!---------------------------------[ Buttons ]--------------------------------->
-
-
 -------
 ### <u>Work Experience</u>
 
+![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) General Technical Director Trainee - [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
 
 ![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) General Technical Director Intern - [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
 
