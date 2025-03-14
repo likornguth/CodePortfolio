@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>Python Ray Tracer (Blender Plugin) - Creative Technology Portfolio</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Python Ray Tracer (Blender Plugin)";
+        var mkdocs_page_input_path = "project7.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Creative Technology Portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project0/">Web-Based IK Rig & Keyframe Editor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project5/">C++ Ray Tracer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">Python Ray Tracer (Blender Plugin)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#sample-output-cornell-box-scene">Sample Output (Cornell Box Scene)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#overview">Overview</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#plugin-information">Plugin Information</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#features-implementation-details">Features &amp; Implementation Details</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#1-ray-casting">1. Ray Casting</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#2-sampling-hemisphere-sampling">2. Sampling &amp; Hemisphere Sampling</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#3-transforming-local-to-world-space">3. Transforming Local to World Space</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#5-area-light-implementation">5. Area Light Implementation</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#6-reflection-and-transmission">6. Reflection and Transmission</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#7-low-discrepancy-sampling-van-der-corput-sequence">7. Low-Discrepancy Sampling (Van der Corput Sequence)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#8-rendering-pipeline">8. Rendering Pipeline</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Espresso Machine Render</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Lite-Brite Toy</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://youtu.be/pZt7602uW6c?si=uqKWJ8O0utF4P-99">Animation Reel</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Creative Technology Portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Python Ray Tracer (Blender Plugin)</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="python-ray-tracer-blender-plugin">Python Ray Tracer (Blender Plugin)</h1>
+<h2 id="sample-output-cornell-box-scene">Sample Output (Cornell Box Scene)</h2>
+<p><img src = /Users/lindsaykornguth/Projects/Documentation/my-project/docs/src/todo3_8samples.png></p>
+<p></img></p>
+<h2 id="overview">Overview</h2>
+<p><strong>Project Name:</strong> simpleRT_plugin.py<br />
+<strong>Purpose:</strong> Blender add-on for a minimal ray tracing engine designed for CS148 HW5.<br />
+<strong>Features Implemented:</strong>
+- Area light support
+- Sampling techniques
+- Indirect illumination (global illumination)</p>
+<hr />
+<h2 id="plugin-information">Plugin Information</h2>
+<ul>
+<li><strong>Name:</strong> <code>simple_ray_tracer</code></li>
+<li><strong>Description:</strong> Simple Ray Tracer for CS148</li>
+<li><strong>Author:</strong> CS148</li>
+<li><strong>Version:</strong> 0.0.2023</li>
+<li><strong>Blender Version Compatibility:</strong> 3.5.1</li>
+<li><strong>Category:</strong> Render</li>
+<li><strong>Wiki URL:</strong> <a href="http://web.stanford.edu/class/cs148/">Stanford CS148 Course</a></li>
+</ul>
+<hr />
+<h2 id="features-implementation-details">Features &amp; Implementation Details</h2>
+<h3 id="1-ray-casting">1. <strong>Ray Casting</strong></h3>
+<ul>
+<li>Uses Blender’s built-in <code>scene.ray_cast()</code> function.</li>
+<li>Determines whether a ray intersects with objects in the scene.</li>
+<li>Returns hit location, normal, and object data.</li>
+</ul>
+<h3 id="2-sampling-hemisphere-sampling">2. <strong>Sampling &amp; Hemisphere Sampling</strong></h3>
+<ul>
+<li>Implements Monte Carlo sampling with a hemisphere function.</li>
+<li>Generates uniformly distributed directions for indirect lighting calculations.</li>
+<li>Uses random values for spherical coordinates conversion.</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">def sample_hemisphere():
+    r1 = np.random.rand()
+    r2 = np.random.rand()
+
+    cos_theta = r1
+    sin_theta = np.sqrt(1 - cos_theta ** 2)
+
+    phi = r2 * 2 * np.pi
+
+    x = sin_theta * np.cos(phi)
+    y = sin_theta * np.sin(phi)
+    z = cos_theta
+
+    return np.array([x, y, z])
+</code></pre>
+<h3 id="3-transforming-local-to-world-space">3. Transforming Local to World Space</h3>
+<ul>
+<li>Converts sampled ray directions from local hemisphere space to world space.</li>
+<li>Uses a transformation matrix formed by the normal and two perpendicular basis vectors.</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">def transform_to_world_space(ray_direction, x, y, n):
+    transform = np.array([x, y, n]).T  
+    return transform @ ray_direction
+</code></pre>
+<h2 id="5-area-light-implementation">5. Area Light Implementation</h2>
+<ul>
+<li>Adds support for area lights by sampling points on the light source.</li>
+<li>Adjusts intensity based on normal alignment (tilt factor).</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">if light.data.type == 'AREA':
+    r = sqrt(np.random.rand())
+    theta = 2 * pi * np.random.rand()
+    emit_loc_local = Vector((r * np.cos(theta), r * np.sin(theta), 0))
+    emit_loc_world = light.matrix_world @ emit_loc_local
+    light_loc = emit_loc_world
+</code></pre>
+<h2 id="6-reflection-and-transmission">6. Reflection and Transmission</h2>
+<ul>
+<li>Implements reflectivity based on Fresnel equations.</li>
+<li>Handles transparency and refraction based on material index of refraction (IOR).</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">reflectivity = mat.mirror_reflectivity
+if mat.use_fresnel:
+    n2 = mat.ior
+    r0 = ((1 - n2) / (1 + n2)) ** 2
+    reflectivity = r0 + (1 - r0) * ((1 + ray_dir.dot(hit_norm)) ** 5)
+</code></pre>
+<h2 id="7-low-discrepancy-sampling-van-der-corput-sequence">7. Low-Discrepancy Sampling (Van der Corput Sequence)</h2>
+<ul>
+<li>Used for anti-aliasing in rendering.</li>
+<li>Generates quasi-random offsets for pixel sampling.</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">def corput(n, base=2):
+    q, denom = 0, 1
+    while n:
+        denom *= base
+        n, remainder = divmod(n, base)
+        q += remainder / denom
+    return q - 0.5
+</code></pre>
+<h2 id="8-rendering-pipeline">8. Rendering Pipeline</h2>
+<ul>
+<li>Iterates through image pixels and samples per pixel.</li>
+<li>Uses recursive tracing for depth-based illumination effects.</li>
+<li>Implements a progress update system for rendering status.</li>
+</ul>
+<p><strong>Code Snippet:</strong></p>
+<pre><code class="language-python">for y in RT_render_scene(scene, width, height, depth, samples, buf):
+    status = f&quot;pass {y//height+1}/{samples} | Remaining {timedelta(seconds=remain)}&quot;
+    self.update_stats(&quot;&quot;, status)
+    print(status, end=&quot;\r&quot;)
+</code></pre>
+<h1 id="performance-considerations">Performance Considerations</h1>
+<h2 id="optimizations">Optimizations:</h2>
+<ul>
+<li>Uses numpy for efficient vector operations.</li>
+<li>Implements stratified sampling for better noise reduction.</li>
+<li>Caches light calculations to reduce redundant operations.</li>
+</ul>
+<h2 id="potential-improvements">Potential Improvements:</h2>
+<ul>
+<li>Implement acceleration structures (BVH or KD-Tree).</li>
+<li>Improve anti-aliasing with more advanced sampling strategies.</li>
+<li>Add support for additional shading models.</li>
+</ul>
+<h1 id="conclusion">Conclusion</h1>
+<p>This Blender plugin extends the simpleRT engine with features such as area lighting, global illumination, and improved sampling techniques. The implementation follows standard ray tracing methodologies while leveraging Blender's built-in API for scene querying and rendering integration. Future improvements could focus on performance optimizations and additional rendering effects.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project5/" class="btn btn-neutral float-left" title="C++ Ray Tracer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href=".." class="btn btn-neutral float-right" title="Espresso Machine Render">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project5/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href=".." style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

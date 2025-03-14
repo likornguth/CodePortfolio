@@ -5,14 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="shortcut icon" href="../img/favicon.ico" />
-    <title>Ray Tracing Engine - Interactive Graphics Portfolio</title>
+    <title>C++ Ray Tracer - Creative Technology Portfolio</title>
     <link rel="stylesheet" href="../css/theme.css" />
     <link rel="stylesheet" href="../css/theme_extra.css" />
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
     
       <script>
         // Current page data
-        var mkdocs_page_name = "Ray Tracing Engine";
+        var mkdocs_page_name = "C++ Ray Tracer";
         var mkdocs_page_input_path = "project5.md";
         var mkdocs_page_url = null;
       </script>
@@ -30,7 +30,7 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
     <div class="wy-side-scroll">
       <div class="wy-side-nav-search">
-          <a href=".." class="icon icon-home"> Interactive Graphics Portfolio
+          <a href=".." class="icon icon-home"> Creative Technology Portfolio
         </a><div role="search">
   <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
       <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
@@ -52,19 +52,67 @@
                 </li>
               </ul>
               <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../project2/">WebGL Stereoscopic Display</a>
-                </li>
-              </ul>
-              <ul>
-                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Mickey Lite-Brite Display</a>
-                </li>
-              </ul>
-              <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="./">C++ Ray Tracer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#part-1-antialiasing">Part 1: Antialiasing</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#implementation-updates">Implementation Updates:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-2-trimesh">Part 2: TriMesh</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#trimesh-functionality">TriMesh Functionality:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mesh-generation">Mesh Generation:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-3-texture-mapping">Part 3: Texture Mapping</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#facegeouv-class">FaceGeoUV Class:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#texture-handling">Texture Handling:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#scene-file-parser-update">Scene File Parser Update:</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#part-4-bounding-volume-hierarchy-bvh">Part 4: Bounding Volume Hierarchy (BVH)</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#bvhnode-implementation">BVHNode Implementation:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#mesh-level-bvh">Mesh-level BVH:</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#final-renders">Final Renders:</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project7/">Python Ray Tracer (Blender Plugin)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Espresso Machine Render</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Lite-Brite Toy</a>
                 </li>
               </ul>
               <ul>
                 <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://youtu.be/pZt7602uW6c?si=uqKWJ8O0utF4P-99">Animation Reel</a>
                 </li>
               </ul>
       </div>
@@ -74,14 +122,14 @@
     <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
       <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
-          <a href="..">Interactive Graphics Portfolio</a>
+          <a href="..">Creative Technology Portfolio</a>
         
       </nav>
       <div class="wy-nav-content">
         <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
   <ul class="wy-breadcrumbs">
     <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
-      <li class="breadcrumb-item active">Ray Tracing Engine</li>
+      <li class="breadcrumb-item active">C++ Ray Tracer</li>
     <li class="wy-breadcrumbs-aside">
     </li>
   </ul>
@@ -90,7 +138,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
             <div class="section" itemprop="articleBody">
               
-                <h1 id="ray-tracing-engine">Ray Tracing Engine</h1>
+                <h1 id="c-ray-tracer">C++ Ray Tracer</h1>
+<p><a href="https://github.com/likornguth/Ray_Tracer_Basic/tree/main" title="Link with example title."><img alt="Button Icon" src="https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&amp;logoColor=white&amp;logo=GitHub" /></a></p>
+<!----------------------------------------------------------------------------->
+<!---------------------------------[ Buttons ]--------------------------------->
 <h2 id="part-1-antialiasing">Part 1: Antialiasing</h2>
 <h3 id="implementation-updates">Implementation Updates:</h3>
 <ul>
@@ -100,6 +151,7 @@
 </ul>
 <hr />
 <h2 id="part-2-trimesh">Part 2: TriMesh</h2>
+<p><img alt="alt text" src="../src/image-4.png" /></p>
 <h3 id="trimesh-functionality">TriMesh Functionality:</h3>
 <p>Implemented TriMesh functionalities (<code>Hit</code>, <code>RayFaceHit</code>, <code>Save</code>, <code>Load</code>, <code>GetBoundingBox</code>, <code>ComputeFaceNormals</code>, <code>ComputeVertexNormals</code>) in <code>trimesh.cc</code>.
 Enhanced scene parser (<code>raytra_parser.cc</code>) to load triangle meshes using the <code>w</code> command.
@@ -107,8 +159,10 @@ Generated and verified rendering for <code>sphere_mesh.scn</code> and <code>suza
 <h3 id="mesh-generation">Mesh Generation:</h3>
 <ul>
 <li>Implemented <code>BuildWatertightSphere()</code> and <code>BuildSphereWithTexCoords()</code> in <code>main.cc</code> of <code>mesh_gen</code>.</li>
-<li><code>BuildSphereWithTexCoords()</code> generates a non-watertight sphere mesh with vertex texture coordinates mapped from spherical coordinates.</li>
-<li><code>BuildWatertightSphere()</code> creates a watertight sphere mesh without boundary vertices, edges, or faces.</li>
+<li><code>BuildSphereWithTexCoords()</code> generates a non-watertight sphere mesh with vertex texture coordinates mapped from spherical coordinates.
+<img alt="alt text" src="../src/image-1.png" /></li>
+<li><code>BuildWatertightSphere()</code> creates a watertight sphere mesh without boundary vertices, edges, or faces.
+<img alt="alt text" src="../src/image-2.png" /></li>
 </ul>
 <hr />
 <h2 id="part-3-texture-mapping">Part 3: Texture Mapping</h2>
@@ -122,27 +176,31 @@ Generated and verified rendering for <code>sphere_mesh.scn</code> and <code>suza
 <li>Modified <code>PhongMaterial</code> to support diffuse textures, allowing evaluation of textures at hit points.</li>
 </ul>
 <h3 id="scene-file-parser-update">Scene File Parser Update:</h3>
+<p><img alt="alt text" src="../src/image-5.png" /></p>
 <ul>
 <li>Updated the scene file parser to support textured Phong materials using image textures.</li>
 </ul>
 <hr />
 <h2 id="part-4-bounding-volume-hierarchy-bvh">Part 4: Bounding Volume Hierarchy (BVH)</h2>
 <h3 id="bvhnode-implementation">BVHNode Implementation:</h3>
-<ul>
-<li>Completed <code>BVHNode::BuildBVH()</code> and <code>BVHNode::Hit()</code> functionalities in <code>bvh_node.cc</code>.
-Introduced a scene-level BVH in <code>main.cc</code> of <code>rtbasic</code> for efficient rendering.</li>
-</ul>
-<h3 id="mesh-level-bvh-bonus">Mesh-level BVH (Bonus):</h3>
-<ul>
-<li>Implemented <code>TriMesh::BuildBVH()</code> to construct a BVH of mesh triangle faces for optimized intersection tests.</li>
-<li>Created a new <code>BVHTriMeshFace</code> class to represent individual TriMesh faces for BVH construction.</li>
-</ul>
+<p><img alt="alt text" src="../src/image-6.png" />
+- Completed <code>BVHNode::BuildBVH()</code> and <code>BVHNode::Hit()</code> functionalities in <code>bvh_node.cc</code>.
+Introduced a scene-level BVH in <code>main.cc</code> of <code>rtbasic</code> for efficient rendering.</p>
+<h3 id="mesh-level-bvh">Mesh-level BVH:</h3>
+<p><img alt="alt text" src="../src/image-7.png" />
+- Implemented <code>TriMesh::BuildBVH()</code> to construct a BVH of mesh triangle faces for optimized intersection tests.
+- Created a new <code>BVHTriMeshFace</code> class to represent individual TriMesh faces for BVH construction.</p>
 <h3 id="final-renders">Final Renders:</h3>
-<p>Rendered scenes such as <code>jug_triangle_soup.scn</code>, <code>sphere_mesh_textured.scn</code>, <code>jug.scn</code>, and <code>dandelion.scn</code> to demonstrate improved rendering with added functionalities.
+<p><img alt="alt text" src="../src/image-8.png" />
+Rendered scenes such as <code>jug_triangle_soup.scn</code>, <code>sphere_mesh_textured.scn</code>, <code>jug.scn</code>, and <code>dandelion.scn</code> to demonstrate improved rendering with added functionalities.
 The assignment includes significant enhancements to ray tracing capabilities, mesh handling, texture mapping, and BVH implementation. The additions allow for improved image quality, efficient mesh representation, and texture-driven material definitions in scene rendering.</p>
               
             </div>
           </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project4/" class="btn btn-neutral float-left" title="OpenGL Mesh Viewer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project7/" class="btn btn-neutral float-right" title="Python Ray Tracer (Blender Plugin)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
 
   <hr/>
 
@@ -164,6 +222,10 @@ The assignment includes significant enhancements to ray tracing capabilities, me
   <span class="rst-current-version" data-toggle="rst-current-version">
     
     
+      <span><a href="../project4/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project7/" style="color: #fcfcfc">Next &raquo;</a></span>
     
   </span>
 </div>
