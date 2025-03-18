@@ -1,8 +1,15 @@
 # Python Ray Tracer (Blender Plugin)
+[![Button Icon2]][Link2]
+<!----------------------------------------------------------------------------->
+[Link2]: https://github.com/likornguth/blender-raytracer 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+[Button Icon2]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 ## Sample Output (Cornell Box Scene)
-<img src = /Users/lindsaykornguth/Projects/Documentation/my-project/docs/src/todo3_8samples.png>
 
-</img>
+
+
+
+![alt text](<src/todo3_8samples.png>)
 
 ## Overview
 

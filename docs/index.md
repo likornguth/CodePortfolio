@@ -27,23 +27,6 @@
 
 ---
 
-### Resume
-
-[<img src="src/resume_screenshot.png" style="width: 10vw;">](./src/Creative_Tech_Resume.pdf)
-
-[![Button Example]][Link]
-<!----------------------------------------------------------------------------->
-[Link]: ./src/Creative_Tech_Resume.pdf 'Link with example title.'
-<!---------------------------------[ Buttons ]--------------------------------->
-
-
----
-
-[Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
-
-[![imdb icon](src/IMDb-Icon.png)](https://www.imdb.com/name/nm16976654/)
-
-
 [![Button Icon5]][Link5]
 <!----------------------------------------------------------------------------->
 [Link5]: https://www.youtube.com/@liko_music 'Link with example title.'
@@ -66,44 +49,87 @@
 [Button Icon12]: https://img.shields.io/badge/GitHub-EF2D5E?style=for-the-badge&color=black&logoColor=white&logo=GitHub
 
 -------
+
+### Resume
+
+[<img src="src/resume_screenshot.png" style="width: 10vw;">](./src/Creative_Tech_Resume.pdf)
+
+[![Button Example]][Link]
+<!----------------------------------------------------------------------------->
+[Link]: ./src/Creative_Tech_Resume.pdf 'Link with example title.'
+<!---------------------------------[ Buttons ]--------------------------------->
+
+
+
+[Button Example]: https://img.shields.io/badge/Open_>-37a779?style=for-the-badge
+
+
 -------
 ### <u>Work Experience</u>
 
-![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) General Technical Director Trainee - [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
+![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
 
-![Alt text](src/Walt_Disney_Animation_Studios_logo.svg.png) General Technical Director Intern - [Walt Disney Animation Studios](https://www.linkedin.com/company/walt-disney-animation-studios/)
+- General Technical Director Trainee (2025-2026)
 
-![Alt text](src/clo_virtual_fashion_inc_logo.png)    Research & Development Intern - [CLO Virtual Fashion](https://www.linkedin.com/company/3214836/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
-
----
-
-![Alt text](src/partizan_logo.png)    Animation Production Intern- [Partizan Studio](https://www.linkedin.com/company/37907/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+- General Technical Director Intern (2024)
 
 ---
 
-![Alt text](src/villareal_logo.png) Web   Graphics Developer - [Leo Villareal Studio](https://villareal.net/)
+![Alt text](src/clo_virtual_fashion_inc_logo.png)   
+[CLO Virtual Fashion](https://www.linkedin.com/company/3214836/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+ 
+- Research & Development Intern (2023)
+
+---
+
+![Alt text](src/partizan_logo.png)  
+ [Partizan Studio](https://www.linkedin.com/company/37907/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BB8w%2BpCSzQD%2B3pqPkOuoGrw%3D%3D)
+
+- Animation Production Intern (2023)
+
+---
+
+![Alt text](src/villareal_logo.png) 
+
+[Leo Villareal Studio](https://villareal.net/)
+
+- Web Graphics Developer (2022)
+
 
 ---
 
 
+![Alt text](src/MERGE_Logo.jpg)  
+[MERGE](https://www.linkedin.com/company/27237129/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
 
-![Alt text](src/MERGE_Logo.jpg)   Immersive Experience Design Intern - [MERGE](https://www.linkedin.com/company/27237129/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+- Immersive Experience Design Intern (2022)
+
 
 -------
 
 ### <u>Volunteer Work</u>
 
-![Alt text](src/CU_EA.png) AI Research Fellow -    [Columbia University Effective Altruism](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+![Alt text](src/CU_EA.png)
+
+[Columbia University Effective Altruism](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+-  AI Research Fellow   (2022)
 
 ---
 
-![Alt text](src/ucsfchildrens_logo.jpeg) Sports Medicine Assistant -    [UCSF Benioff Childrens' Hospital](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+![Alt text](src/ucsfchildrens_logo.jpeg) 
+
+ [UCSF Benioff Childrens' Hospital](https://www.linkedin.com/company/3345128/?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base%3BoEqCrM7GTX2Uiyiqn29EqQ%3D%3D)
+
+- Sports Medicine/PT Assistant (2015-2019)
 
 ---
 
-------
 
 ## Press
+
+[![imdb icon](src/IMDb-Icon.png)](https://www.imdb.com/name/nm16976654/)
+
 
 * [<i>RatRock Magazine</i>: "Featured Artist"](https://www.ratrockmagazine.com/feature/2022/3/26/lindsay-kornguth)
 * [<i>United States Chess Federation</i>: "Top 50 Highest Rated Female Players"](https://www.uschess.org/component/option,com_top_players/Itemid,371?op=list&month=1609&f=usa&l=R:Top%20Girls%20Age%2015.&h=Top%20Girls%20Age%2015)
