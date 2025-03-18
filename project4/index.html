@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>OpenGL Mesh Viewer - Creative Technology Portfolio</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "OpenGL Mesh Viewer";
+        var mkdocs_page_input_path = "project4.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Creative Technology Portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project0/">Web-Based IK Rig & Keyframe Editor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">OpenGL Mesh Viewer</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#opengl-based-mesh-viewer-implementation">OpenGL-based Mesh Viewer Implementation</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#objective">Objective</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#components-and-implementation">Components and Implementation</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#trimesh-class-overview">TriMesh Class Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#constructors-and-destructors">Constructors and Destructors</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#public-member-functions">Public Member Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#internal-data-members">Internal Data Members</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#external-dependencies">External Dependencies</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#main-maincc-overview">Main (main.cc) Overview</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#functions">Functions</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#main-function">Main Function</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#technical-implementation-notes">Technical Implementation Notes</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#result-and-recommendations">Result and Recommendations</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project5/">C++ Ray Tracer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project7/">Python Ray Tracer (Blender Plugin)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project8/">Blender Projects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Lite-Brite Toy</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project6/">VR Music Video</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://youtu.be/pZt7602uW6c?si=uqKWJ8O0utF4P-99">Animation Reel</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Creative Technology Portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">OpenGL Mesh Viewer</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="opengl-mesh-viewer">OpenGL Mesh Viewer</h1>
+<p><img alt="Alt text" src="../src/olio_mesh_view_COPY.png" /></p>
+<h2 id="opengl-based-mesh-viewer-implementation">OpenGL-based Mesh Viewer Implementation</h2>
+<p><a href="https://github.com/likornguth/OpenGL_MeshViewer" title="Link with example title."><img alt="Button Icon" src="https://img.shields.io/badge/Github-EF2D5E?style=for-the-badge&amp;logoColor=white&amp;logo=GitHub" /></a></p>
+<!----------------------------------------------------------------------------->
+<!---------------------------------[ Buttons ]--------------------------------->
+<hr />
+<h3 id="objective">Objective</h3>
+<p>The task involves creating an OpenGL-based mesh viewer capable of displaying multiple models simultaneously, each shaded using the Blinn-Phong illumination model. User interaction functionalities, such as mouse-driven model rotation and camera movement, are also implemented. The viewer is expected to load models, apply transformations for scaling and positioning, and render them alongside interactions and appropriate lighting effects.</p>
+<hr />
+<h3 id="components-and-implementation">Components and Implementation</h3>
+<ol>
+<li>
+<p>Model Loading and Display</p>
+<ul>
+<li>
+<p>The application loads models provided as command-line arguments and arranges them uniformly within a 2x2x2 cube centered at the origin.</p>
+</li>
+<li>
+<p>A new TriMesh class manages model loading (Load), bounding box calculation (GetBoundingBox), OpenGL buffer handling (DeleteGLBuffers, UpdateGLBuffers), and rendering (DrawGL).
+Shading and Lighting</p>
+</li>
+<li>
+<p>Implements the Blinn-Phong shading model for each model, computed within the fragment shader, resulting in smoother color transitions and improved specular highlights.</p>
+</li>
+<li>Utilizes three point lights with varying positions and colors to illuminate the models, enhancing their visual appearance.</li>
+</ul>
+</li>
+<li>
+<p>User Interaction</p>
+<ul>
+<li>Model Rotation: Allows users to click and drag the mouse to rotate the models around the origin. The x and y changes in mouse coordinates determine the rotation matrices applied to the models.</li>
+<li>Camera Movement: Incorporates keyboard input (x and z keys) to adjust the camera's distance from the origin along the z-axis, preventing the camera from moving too close to the models.</li>
+<li>
+<p>Reset Functionality: Pressing the spacebar resets both the model rotations and the camera position.
+Camera Setup</p>
+</li>
+<li>
+<p>Initially positions the camera at (0, 0, 2), looking at the origin along the -z direction, with an up-vector of (0, 1, 0), and a vertical field of view of 60 degrees.</p>
+</li>
+</ul>
+</li>
+</ol>
+<hr />
+<h2 id="trimesh-class-overview">TriMesh Class Overview</h2>
+<h3 id="constructors-and-destructors">Constructors and Destructors</h3>
+<ul>
+<li><strong>Constructor:</strong> <code>TriMesh(const std::string &amp;name)</code>: Initializes a <code>TriMesh</code> object with a specified name. Sets the name as "TriMesh" if no name is provided.</li>
+<li><strong>Destructor:</strong> <code>~TriMesh()</code>: Cleans up OpenGL buffers by calling <code>DeleteGLBuffers()</code>.</li>
+</ul>
+<h3 id="public-member-functions">Public Member Functions</h3>
+<pre><code>void
+TriMesh::GetBoundingBox(Vec3r &amp;bmin, Vec3r &amp;bmax)
+{
+    // iterate over every vertex
+    for (auto vit =  vertices_begin(); vit != vertices_end(); ++vit){
+      Vec3r point = this-&gt;point(*vit);
+      bmin[0] = std::min(bmin[0], point[0]);
+      bmin[1] = std::min(bmin[1], point[1]);
+      bmin[2] = std::min(bmin[2], point[2]);
+      bmax[0] = std::max(bmax[0], point[0]);
+      bmax[1] = std::max(bmax[1], point[1]);
+      bmax[2] = std::max(bmax[2], point[2]);
+    }
+}
+</code></pre>
+<ul>
+<li><strong><code>GetBoundingBox(Vec3r &amp;bmin, Vec3r &amp;bmax)</code>:</strong> Computes the bounding box of the mesh by iterating over each vertex and updating the minimum and maximum coordinates.</li>
+</ul>
+<pre><code>bool 
+TriMesh::Load(const fs::path &amp;filepath)
+{
+  OpenMesh::IO::Options opts = OpenMesh::IO::Options::VertexTexCoord |
+    OpenMesh::IO::Options::VertexNormal |
+    OpenMesh::IO::Options::FaceNormal;
+
+  // save name
+  filepath_ = filepath;
+
+  // request vertex texture coordinates
+  request_vertex_texcoords2D();
+
+  // request vertex and face normals
+  request_vertex_normals();
+
+  request_face_normals();
+
+  // read in mesh
+  auto filename = filepath_.string();
+  spdlog::info (&quot;loading {}...&quot;, filename);
+
+  // check if the mesh file contained vertex (or face normals) normals
+  // if not, compute normals
+  if(!opts.check(OpenMesh::IO::Options::FaceNormal))
+    update_face_normals();
+  if(!opts.check(OpenMesh::IO::Options::VertexNormal))
+    update_vertex_normals();
+  if (has_halfedge_normals())
+    update_halfedge_normals();
+
+  return true;
+
+}
+</code></pre>
+<ul>
+<li><strong><code>Load(const fs::path &amp;filepath)</code>:</strong> Loads a mesh from a specified file path, reading the mesh data and computing normals if needed.</li>
+</ul>
+<pre><code>bool TriMesh::ComputeFaceNormals()
+{
+  auto FaceNormal = [&amp;](TriMesh::FaceHandle fh) {
+    auto heh = halfedge_handle(fh);
+    Vec3r p0 = point(from_vertex_handle(heh));
+    Vec3r p1 = point(to_vertex_handle(heh));
+    auto vh2 = to_vertex_handle(next_halfedge_handle(heh));
+    Vec3r p2 = point(vh2);
+    Vec3r face_normal = (p1 - p0).cross(p2 - p0);
+    return face_normal.normalized();
+  };
+
+  if (!has_face_normals())
+    return false;
+  for (auto fit = faces_begin(); fit != faces_end(); ++fit)
+    set_normal(*fit, FaceNormal(*fit));
+  return true;
+
+}
+</code></pre>
+<ul>
+<li><strong><code>ComputeFaceNormals()</code>:</strong> Computes face normals for the mesh.</li>
+</ul>
+<pre><code>bool TriMesh::ComputeVertexNormals()
+{
+  auto VertexNormal = [&amp;](TriMesh::VertexHandle vh) {
+     Vec3r vertex_normal{0, 0, 0};
+     for (auto vfit = vf_iter(vh); vfit.is_valid(); ++vfit)
+       vertex_normal += normal(*vfit);
+     vertex_normal.normalize();
+     return vertex_normal;
+  };
+
+  if (!has_vertex_normals() || !has_face_normals())
+    return false;
+  for (auto vit = vertices_begin(); vit != vertices_end(); ++vit)
+    set_normal(*vit, VertexNormal(*vit));
+  return true;
+
+}
+</code></pre>
+<ul>
+<li><strong><code>ComputeVertexNormals()</code>:</strong> Computes vertex normals for the mesh based on face normals.</li>
+</ul>
+<h3 id="internal-data-members">Internal Data Members</h3>
+<ul>
+<li><strong>OpenGL Buffer IDs:</strong> <code>positions_normals_vbo_</code>, <code>faces_ebo_</code>: IDs for vertex and element buffer objects used by OpenGL.</li>
+<li><strong>Mesh Information:</strong> <code>filepath_</code>, <code>name_</code>: Filepath and name of the mesh.</li>
+<li><strong>GL Buffer Status:</strong> <code>gl_buffers_dirty_</code>: A flag indicating if OpenGL buffers need updating.</li>
+</ul>
+<h3 id="external-dependencies">External Dependencies</h3>
+<ul>
+<li><strong>External Libraries:</strong> <code>spdlog</code>, <code>boost::filesystem</code>.</li>
+<li><strong>OpenGL Utilities:</strong> <code>GLDrawData</code>, <code>GLShader</code>.</li>
+</ul>
+<hr />
+<h2 id="main-maincc-overview">Main (<code>main.cc</code>) Overview</h2>
+<h3 id="functions">Functions</h3>
+<pre><code>void
+GetViewAndProjectionMatrices(glm::mat4 &amp;view_matrix, glm::mat4 &amp;proj_matrix)
+{
+  // compute aspect ratio
+  float aspect = static_cast&lt;float&gt;(window_size_g[0]) /
+    static_cast&lt;float&gt;(window_size_g[1]);
+  view_matrix = glm::lookAt(glm::vec3(0, 0, camera_z_pos), glm::vec3(0, 0, -2), glm::vec3(0, 1, 0));
+  proj_matrix = glm::perspective(static_cast&lt;float&gt;(60.0 * kDEGtoRAD), aspect,
+                                 0.01f, 50.0f);
+}
+</code></pre>
+<ul>
+<li><strong><code>GetViewAndProjectionMatrices</code></strong>: Computes view and projection matrices based on window dimensions.</li>
+</ul>
+<pre><code>Mat4r
+TransformMesh(int index, TriMesh::Ptr m)
+{
+  // scale to fit inside unit cube
+  Mat4r scale_xform{Mat4r::Identity()};
+  int i = 0;
+  TriMesh::Ptr mesh = m;
+  // find current mesh by index... 
+
+  Vec3r bmin, bmax;
+  mesh-&gt;GetBoundingBox(bmin, bmax);
+  Real xdim = bmax[0]-bmin[0];
+  Real ydim = bmax[1]-bmin[1];
+  Real zdim = bmax[2]-bmin[2];
+  // // scale so that the maximum dimension = 1;
+  auto maxdim = std::max(xdim,ydim);
+  maxdim = std::max(maxdim, zdim);
+  Real scale = 2.0 / maxdim;
+
+  scale /= i;
+  scale_xform.diagonal() = Vec4r{scale, scale, scale, 1};
+
+
+  Vec3r center = scale*(bmin + 0.5*(bmax-bmin)); // midpoint of longest line
+  double size = 2.0; // objects must fit within 2x2x2 box
+  double xshift = index*(size/i) + size/(i*2) - size/2; // placement of object along x-axis
+  Mat4r translate_xform{Mat4r::Identity()};
+
+    // Compute Transformation Matrices (RotateX, RotateY, Translate, Scale)
+    // ...
+
+  mesh_xform_g = translate_xform *  rotate_y_xform * rotate_x_xform * scale_xform ;
+
+
+  return (rotate_y_xform * rotate_x_xform * translate_xform * scale_xform );
+  // meshlist_xform_g.push_back(mesh_xform_g);
+
+
+}
+</code></pre>
+<ul>
+<li><strong><code>TransformMesh</code></strong>: Function to transform mesh based on user input</li>
+</ul>
+<pre><code>Mat4r
+ResetMesh(int index, TriMesh::Ptr m)
+{
+    int i = 0;
+    TriMesh::Ptr mesh = m;
+    // find current mesh by index ...
+
+    delta_x = 0;
+    delta_y = 0;
+
+    Mat4r total_rotate_x_xform{Mat4r::Identity()};
+    // Compute rotation x matrix ... 
+
+    Mat4r total_rotate_y_xform{Mat4r::Identity()};
+    // Compute rotation y matrix ... 
+
+    Mat4r inv_rotate_x_xform = total_rotate_x_xform.inverse();
+    Mat4r inv_rotate_y_xform = total_rotate_y_xform.inverse();
+
+    return (inv_rotate_y_xform * inv_rotate_x_xform);
+
+}
+</code></pre>
+<ul>
+<li><strong><code>ResetMesh</code></strong>: Function to reset transformation on meshes based on previous changes made</li>
+</ul>
+<pre><code>void
+UpdateSphere(Real glfw_time)
+{
+  // scale 2x along x-axis
+  Mat4r scale_xform{Mat4r::Identity()};
+  scale_xform.diagonal() = Vec4r{2, 1, 1, 1};
+
+  // rotate around y-axis based on current time
+  Real rotation_speed = 90;  // 90 degrees per second
+  Mat4r rotate_y_xform{Mat4r::Identity()};
+  Real rotate_y_angle = glfw_time * rotation_speed;
+  // Calculate Rotation Matrix
+
+  // rotate around z-axis based on current time
+  rotation_speed = 30;  // 30 degrees per second
+  Mat4r rotate_z_xform{Mat4r::Identity()};
+  Real rotate_z_angle = glfw_time * rotation_speed;
+  // Calculate Rotation Matrix
+
+  // compose sphere's transformation matrix
+  sphere_xform_g = rotate_z_xform * rotate_y_xform * scale_xform;
+}
+</code></pre>
+<ul>
+<li><strong><code>UpdateSphere</code></strong>: Updates the transformation of a sphere based on time.</li>
+</ul>
+<h3 id="main-function">Main Function</h3>
+<p>The main function initializes the OpenGL window, sets up the VAO, creates objects (spheres and meshes), sets materials and lights, and runs the main rendering loop.</p>
+<p>The result is an interactive 3D rendering application where you can manipulate objects using keyboard inputs and mouse interactions. It supports rendering spheres and meshes with materials and lighting in an OpenGL context.</p>
+<p>The code structure includes functionality for handling different types of 3D objects, setting up materials, and handling user inputs to interact with the rendered scene.</p>
+<h3 id="technical-implementation-notes">Technical Implementation Notes</h3>
+<ol>
+<li>
+<p>Shader Implementation</p>
+<ul>
+<li>Implements new vertex and fragment shaders to facilitate the Blinn-Phong shading model for enhanced visual quality and lighting effects.</li>
+</ul>
+</li>
+<li>
+<p>OpenGL Rendering</p>
+<ul>
+<li>Utilizes OpenGL functionality to manage and display meshes, leveraging vertex buffer objects for efficient rendering.</li>
+</ul>
+</li>
+<li>User Interaction Handling<ul>
+<li>Incorporates GLFW callbacks for mouse button and cursor position events to manage model rotation.</li>
+<li>Manages keyboard input to adjust the camera's distance from the models and reset functionalities.</li>
+</ul>
+</li>
+</ol>
+<h3 id="result-and-recommendations">Result and Recommendations</h3>
+<p>The completed assignment provides a functional OpenGL-based mesh viewer capable of loading, positioning, and shading multiple models using the Blinn-Phong illumination model. It offers interactive features for user-controlled model rotation and camera movement, ensuring a dynamic and immersive viewing experience. Recommendations for further improvements might include optimizations for rendering performance, additional shader effects, or extending the application's functionality to support more complex meshes or textures.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project3/" class="btn btn-neutral float-left" title="Node Graph Visualizer"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../project5/" class="btn btn-neutral float-right" title="C++ Ray Tracer">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project3/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../project5/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

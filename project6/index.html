@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <link rel="shortcut icon" href="../img/favicon.ico" />
+    <title>VR Music Video - Creative Technology Portfolio</title>
+    <link rel="stylesheet" href="../css/theme.css" />
+    <link rel="stylesheet" href="../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "VR Music Video";
+        var mkdocs_page_input_path = "project6.md";
+        var mkdocs_page_url = null;
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href=".." class="icon icon-home"> Creative Technology Portfolio
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project0/">Web-Based IK Rig & Keyframe Editor</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project3/">Node Graph Visualizer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project4/">OpenGL Mesh Viewer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project5/">C++ Ray Tracer</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project7/">Python Ray Tracer (Blender Plugin)</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project8/">Blender Projects</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../project1/">Interactive Lite-Brite Toy</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">VR Music Video</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#how-to-play">How to Play</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#animation-rig-overview">Animation Rig Overview</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#constants">Constants</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#animationrigcomponent-object">animationRigComponent Object</a>
+        <ul>
+    <li class="toctree-l4"><a class="reference internal" href="#initialization-init">Initialization (init())</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#load-function">load() Function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#updateprevdata-function">update(prevData) Function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#stopaction-function">stopAction() Function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#playaction-function">playAction() Function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#tickt-dt-function">tick(t, dt) Function</a>
+    </li>
+    <li class="toctree-l4"><a class="reference internal" href="#export">Export</a>
+    </li>
+        </ul>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="" href="https://youtu.be/pZt7602uW6c?si=uqKWJ8O0utF4P-99">Animation Reel</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="..">Creative Technology Portfolio</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href=".." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">VR Music Video</li>
+    <li class="wy-breadcrumbs-aside">
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="vr-music-video-thundr-liko">VR Music Video: THUNDR (liKo)</h1>
+<hr />
+<p style="text-align:center;">
+<img width="250" alt="Screenshot 2023-11-08 at 12 37 19 PM" src="https://media.giphy.com/media/BJtWqBAXtoatUmTqAx/giphy.gif">
+</p>
+
+<hr />
+<h2 id="how-to-play">How to Play</h2>
+<p><b> 1. Open the Web Application (Desktop or Mobile):</b></p>
+<p style="text-align:center;">
+<a data-8code="t7uuk"></a>
+<script src="//cdn.8thwall.com/web/share/embed8.js"></script>
+</p>
+
+<p><b> 2. Press the Play button to launch the experience</b></p>
+<p style="text-align:center;">
+<img src="/src/play.png"></img>
+</p>
+
+<p><b> 3. Tap the ground to place thunder clouds in the sky overhead</b></p>
+<p style="text-align:center;">
+<img src="/src/thundercloudbutton.png"></img>
+</p>
+
+<p><b> 4. Press the Thundercloud button to create a thunderstorm </b></p>
+<hr />
+<h3 id="animation-rig-overview">Animation Rig Overview</h3>
+<p>The <code>animationRigComponent</code> is responsible for managing animations within a Three.js environment. Here's a technical breakdown of its functionalities:</p>
+<h3 id="constants">Constants</h3>
+<pre><code>const LoopMode = {
+  once: THREE.LoopOnce,
+  repeat: THREE.LoopRepeat,
+  pingpong: THREE.LoopPingPong,
+}
+</code></pre>
+<ul>
+<li><code>LoopMode</code>: Defines different looping modes (<code>once</code>, <code>repeat</code>, <code>pingpong</code>) for animations using constants from the Three.js library.</li>
+</ul>
+<hr />
+<h3 id="animationrigcomponent-object"><code>animationRigComponent</code> Object</h3>
+<h4 id="initialization-init">Initialization (<code>init()</code>)</h4>
+<pre><code>init() {
+    this.model = null,
+    this.remoteModel = null,
+    this.mixer = null,
+    this.activeActions = []
+    let {remoteId} = this.data
+    remoteId = remoteId.charAt(0) === '#' ? remoteId.slice(1) : remoteId
+    const remoteEl = document.getElementById(remoteId)
+    remoteEl || console.error('ramx: Remote entity not found. Pass the ID of the entity, not the model.'),
+    this.model = this.el.getObject3D('mesh'),
+    this.remoteModel = remoteEl.getObject3D('mesh')
+
+  },
+</code></pre>
+<ul>
+<li>Fetches and verifies required elements (<code>model</code> and <code>remoteModel</code>) for animations.</li>
+<li>Listens for the loaded event of the required elements and initializes when both are available.</li>
+</ul>
+<h4 id="load-function"><code>load()</code> Function</h4>
+<pre><code>load() {
+    const {el} = this
+    this.model.animations = [...this.remoteModel.animations],
+    this.mixer = new THREE.AnimationMixer(this.model),
+    this.mixer.addEventListener('loop', (e) =&gt; {
+      el.emit('animation-loop', {
+        action: e.action,
+        loopDelta: e.loopDelta,
+      })
+    }),
+    this.mixer.addEventListener('finished', (e) =&gt; {
+      el.emit('animation-finished', {
+        action: e.action,
+        direction: e.direction,
+      })
+    }),
+    this.data.clip &amp;&amp; this.update({})
+  },
+</code></pre>
+<ul>
+<li>Loads animations onto the <code>model</code> from the <code>remoteModel</code>.</li>
+<li>Sets up a mixer to manage animations and emits events on loop and finish of animations.</li>
+</ul>
+<h4 id="updateprevdata-function"><code>update(prevData)</code> Function</h4>
+<pre><code>update(prevData) {
+    if (!prevData) return
+    const {data} = this
+    const changes = AFRAME.utils.diff(data, prevData)
+    if ('clip' in changes) {
+      return this.stopAction(),
+      void (data.clip &amp;&amp; this.playAction())
+    }
+    this.activeActions.forEach((action) =&gt; {
+      'duration' in changes &amp;&amp; data.duration &amp;&amp; action.setDuration(data.duration),
+      'clampWhenFinished' in changes &amp;&amp; (action.clampWhenFinished = data.clampWhenFinished),
+      ('loop' in changes || 'repetitions' in changes) &amp;&amp; action.setLoop(LoopMode[data.loop], data.repetitions),
+      'timeScale' in changes &amp;&amp; action.setEffectiveTimeScale(data.timeScale)
+    })
+  }
+</code></pre>
+<ul>
+<li>Monitors changes in component data and updates animations accordingly.</li>
+<li>Modifies active animation actions based on changes in data properties.</li>
+</ul>
+<h4 id="stopaction-function"><code>stopAction()</code> Function</h4>
+<pre><code>stopAction() {
+    const {data} = this
+    for (let i = 0; i &lt; this.activeActions.length; i++) data.crossFadeDuration ? this.activeActions[i].fadeOut(data.crossFadeDuration) : this.activeActions[i].stop()
+    this.activeActions = []
+  }
+</code></pre>
+<ul>
+<li>Stops ongoing animation actions based on the updated data.</li>
+</ul>
+<h4 id="playaction-function"><code>playAction()</code> Function</h4>
+<pre><code>playAction() {
+    if (!this.mixer) return
+    const {model} = this
+    const {data} = this
+    const clips = model.animations || (model.geometry || {}).animations || []
+    if (!clips.length) return
+    const re = wildcardToRegExp(data.clip)
+    for (let clip, i = 0; clip = clips[i]; i++) {
+      if (clip.name.match(re)) {
+        const action = this.mixer.clipAction(clip, model)
+        action.enabled = !0,
+        action.clampWhenFinished = data.clampWhenFinished,
+        data.duration &amp;&amp; action.setDuration(data.duration),
+        data.timeScale !== 1 &amp;&amp; action.setEffectiveTimeScale(data.timeScale),
+        action.setLoop(LoopMode[data.loop], data.repetitions).fadeIn(data.crossFadeDuration).play(),
+        this.activeActions.push(action)
+      }
+    }
+  }
+</code></pre>
+<ul>
+<li>Plays animations based on the provided clip pattern.</li>
+<li>Selects animations from available clips based on a wildcard match and configures their properties before playing.</li>
+</ul>
+<h4 id="tickt-dt-function"><code>tick(t, dt)</code> Function</h4>
+<pre><code>tick(t, dt) {
+    this.mixer &amp;&amp; !Number.isNaN(dt) &amp;&amp; this.mixer.update(dt / 1e3)
+  }
+</code></pre>
+<ul>
+<li>Handles the Three.js animation loop by updating the mixer with the elapsed time (<code>dt</code>) if the mixer exists and <code>dt</code> is a valid number.</li>
+</ul>
+<h4 id="export">Export</h4>
+<ul>
+<li>Exports the <code>animationRigComponent</code> for use in the larger codebase.</li>
+</ul>
+<p>This component enables dynamic loading and management of animations onto 3D models within a Three.js scene. It allows for flexible control over animation playback, durations, looping, and time scaling, responding to changes in component data.</p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../project1/" class="btn btn-neutral float-left" title="Interactive Lite-Brite Toy"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+    
+      <span><a href="../project1/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "..";</script>
+    <script src="../js/theme_extra.js"></script>
+    <script src="../js/theme.js"></script>
+      <script src="../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
